@@ -28,114 +28,492 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbBlotterType = new System.Windows.Forms.ComboBox();
-            this.cmbNature = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.txtPhone1st = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.txtAge1st = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.txtAddress1st = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.txtName1st = new System.Windows.Forms.RichTextBox();
+            this.lblSelectedImage = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblSelectedImage = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.txtCaseNo = new System.Windows.Forms.RichTextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.txtPhone2nd = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txtAge2nd = new System.Windows.Forms.RichTextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.txtAddress2nd = new System.Windows.Forms.RichTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.txtName2nd = new System.Windows.Forms.RichTextBox();
+            this.txtPage = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbNature = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbBlotterType = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateFirstHearing = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtWarning = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // panel6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(88, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Blotter Type";
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.panel3);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.panel2);
+            this.panel6.Location = new System.Drawing.Point(574, 26);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(628, 304);
+            this.panel6.TabIndex = 48;
             // 
-            // richTextBox1
+            // label8
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox1.Multiline = false;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.RightMargin = 10;
-            this.richTextBox1.Size = new System.Drawing.Size(278, 20);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "001-2023";
-            this.richTextBox1.WordWrap = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(57, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 22);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Contact #";
             // 
-            // panel1
+            // label7
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Location = new System.Drawing.Point(103, 236);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel1.Size = new System.Drawing.Size(293, 35);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(57, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 22);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Age";
             // 
-            // cmbBlotterType
+            // panel5
             // 
-            this.cmbBlotterType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.cmbBlotterType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBlotterType.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbBlotterType.FormattingEnabled = true;
-            this.cmbBlotterType.ItemHeight = 22;
-            this.cmbBlotterType.Items.AddRange(new object[] {
-            "FOR THE RECORD",
-            "AGREEMENT",
-            "CASE NUMBER"});
-            this.cmbBlotterType.Location = new System.Drawing.Point(103, 95);
-            this.cmbBlotterType.Name = "cmbBlotterType";
-            this.cmbBlotterType.Size = new System.Drawing.Size(293, 30);
-            this.cmbBlotterType.TabIndex = 4;
-            this.cmbBlotterType.Text = "--Select one--";
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel5.Controls.Add(this.txtPhone1st);
+            this.panel5.Location = new System.Drawing.Point(142, 215);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel5.Size = new System.Drawing.Size(341, 35);
+            this.panel5.TabIndex = 21;
+            // 
+            // txtPhone1st
+            // 
+            this.txtPhone1st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtPhone1st.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone1st.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPhone1st.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPhone1st.Location = new System.Drawing.Point(10, 5);
+            this.txtPhone1st.Multiline = false;
+            this.txtPhone1st.Name = "txtPhone1st";
+            this.txtPhone1st.RightMargin = 10;
+            this.txtPhone1st.Size = new System.Drawing.Size(326, 20);
+            this.txtPhone1st.TabIndex = 1;
+            this.txtPhone1st.Text = "001-2023";
+            this.txtPhone1st.WordWrap = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(57, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 22);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Address";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel4.Controls.Add(this.txtAge1st);
+            this.panel4.Location = new System.Drawing.Point(100, 166);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel4.Size = new System.Drawing.Size(127, 35);
+            this.panel4.TabIndex = 17;
+            // 
+            // txtAge1st
+            // 
+            this.txtAge1st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtAge1st.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAge1st.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAge1st.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAge1st.Location = new System.Drawing.Point(10, 5);
+            this.txtAge1st.Multiline = false;
+            this.txtAge1st.Name = "txtAge1st";
+            this.txtAge1st.RightMargin = 10;
+            this.txtAge1st.Size = new System.Drawing.Size(112, 20);
+            this.txtAge1st.TabIndex = 1;
+            this.txtAge1st.Text = "21";
+            this.txtAge1st.WordWrap = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel3.Controls.Add(this.txtAddress1st);
+            this.panel3.Location = new System.Drawing.Point(130, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel3.Size = new System.Drawing.Size(353, 35);
+            this.panel3.TabIndex = 18;
+            // 
+            // txtAddress1st
+            // 
+            this.txtAddress1st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtAddress1st.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress1st.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAddress1st.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAddress1st.Location = new System.Drawing.Point(10, 5);
+            this.txtAddress1st.Multiline = false;
+            this.txtAddress1st.Name = "txtAddress1st";
+            this.txtAddress1st.RightMargin = 10;
+            this.txtAddress1st.Size = new System.Drawing.Size(338, 20);
+            this.txtAddress1st.TabIndex = 1;
+            this.txtAddress1st.Text = "001-2023";
+            this.txtAddress1st.WordWrap = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(57, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 22);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(110, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(222, 27);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "First Party Information";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.txtName1st);
+            this.panel2.Location = new System.Drawing.Point(115, 73);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel2.Size = new System.Drawing.Size(368, 35);
+            this.panel2.TabIndex = 15;
+            // 
+            // txtName1st
+            // 
+            this.txtName1st.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtName1st.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName1st.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtName1st.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName1st.Location = new System.Drawing.Point(10, 5);
+            this.txtName1st.Multiline = false;
+            this.txtName1st.Name = "txtName1st";
+            this.txtName1st.RightMargin = 10;
+            this.txtName1st.Size = new System.Drawing.Size(353, 20);
+            this.txtName1st.TabIndex = 1;
+            this.txtName1st.Text = "001-2023";
+            this.txtName1st.WordWrap = false;
+            // 
+            // lblSelectedImage
+            // 
+            this.lblSelectedImage.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSelectedImage.Location = new System.Drawing.Point(238, 379);
+            this.lblSelectedImage.Name = "lblSelectedImage";
+            this.lblSelectedImage.Size = new System.Drawing.Size(226, 51);
+            this.lblSelectedImage.TabIndex = 54;
+            this.lblSelectedImage.Text = "No selected image";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(114, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 38);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "Select image";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(89, 345);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(161, 22);
+            this.label15.TabIndex = 52;
+            this.label15.Text = "Blotter Record Photo";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(89, 270);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 22);
+            this.label14.TabIndex = 51;
+            this.label14.Text = "Page #";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel12.Controls.Add(this.txtCaseNo);
+            this.panel12.Location = new System.Drawing.Point(104, 295);
+            this.panel12.Name = "panel12";
+            this.panel12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel12.Size = new System.Drawing.Size(293, 35);
+            this.panel12.TabIndex = 50;
+            // 
+            // txtCaseNo
+            // 
+            this.txtCaseNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtCaseNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCaseNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCaseNo.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCaseNo.Location = new System.Drawing.Point(10, 5);
+            this.txtCaseNo.Multiline = false;
+            this.txtCaseNo.Name = "txtCaseNo";
+            this.txtCaseNo.RightMargin = 10;
+            this.txtCaseNo.Size = new System.Drawing.Size(278, 20);
+            this.txtCaseNo.TabIndex = 1;
+            this.txtCaseNo.Text = "23";
+            this.txtCaseNo.WordWrap = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.panel11);
+            this.panel8.Controls.Add(this.label12);
+            this.panel8.Controls.Add(this.label13);
+            this.panel8.Controls.Add(this.panel13);
+            this.panel8.Location = new System.Drawing.Point(574, 328);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(628, 304);
+            this.panel8.TabIndex = 49;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(57, 218);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 22);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Contact #";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(57, 168);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 22);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Age";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel9.Controls.Add(this.txtPhone2nd);
+            this.panel9.Location = new System.Drawing.Point(142, 215);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel9.Size = new System.Drawing.Size(341, 35);
+            this.panel9.TabIndex = 21;
+            // 
+            // txtPhone2nd
+            // 
+            this.txtPhone2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtPhone2nd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone2nd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPhone2nd.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPhone2nd.Location = new System.Drawing.Point(10, 5);
+            this.txtPhone2nd.Multiline = false;
+            this.txtPhone2nd.Name = "txtPhone2nd";
+            this.txtPhone2nd.RightMargin = 10;
+            this.txtPhone2nd.Size = new System.Drawing.Size(326, 20);
+            this.txtPhone2nd.TabIndex = 1;
+            this.txtPhone2nd.Text = "001-2023";
+            this.txtPhone2nd.WordWrap = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(57, 123);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 22);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Address";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel10.Controls.Add(this.txtAge2nd);
+            this.panel10.Location = new System.Drawing.Point(100, 166);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel10.Size = new System.Drawing.Size(127, 35);
+            this.panel10.TabIndex = 17;
+            // 
+            // txtAge2nd
+            // 
+            this.txtAge2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtAge2nd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAge2nd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAge2nd.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAge2nd.Location = new System.Drawing.Point(10, 5);
+            this.txtAge2nd.Multiline = false;
+            this.txtAge2nd.Name = "txtAge2nd";
+            this.txtAge2nd.RightMargin = 10;
+            this.txtAge2nd.Size = new System.Drawing.Size(112, 20);
+            this.txtAge2nd.TabIndex = 1;
+            this.txtAge2nd.Text = "22";
+            this.txtAge2nd.WordWrap = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel11.Controls.Add(this.txtAddress2nd);
+            this.panel11.Location = new System.Drawing.Point(130, 120);
+            this.panel11.Name = "panel11";
+            this.panel11.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel11.Size = new System.Drawing.Size(353, 35);
+            this.panel11.TabIndex = 18;
+            // 
+            // txtAddress2nd
+            // 
+            this.txtAddress2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtAddress2nd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress2nd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAddress2nd.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAddress2nd.Location = new System.Drawing.Point(10, 5);
+            this.txtAddress2nd.Multiline = false;
+            this.txtAddress2nd.Name = "txtAddress2nd";
+            this.txtAddress2nd.RightMargin = 10;
+            this.txtAddress2nd.Size = new System.Drawing.Size(338, 20);
+            this.txtAddress2nd.TabIndex = 1;
+            this.txtAddress2nd.Text = "001-2023";
+            this.txtAddress2nd.WordWrap = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(57, 77);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 22);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Name";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(110, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(248, 27);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Second Party Information";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel13.Controls.Add(this.txtName2nd);
+            this.panel13.Location = new System.Drawing.Point(115, 73);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel13.Size = new System.Drawing.Size(368, 35);
+            this.panel13.TabIndex = 15;
+            // 
+            // txtName2nd
+            // 
+            this.txtName2nd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtName2nd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName2nd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtName2nd.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName2nd.Location = new System.Drawing.Point(10, 5);
+            this.txtName2nd.Multiline = false;
+            this.txtName2nd.Name = "txtName2nd";
+            this.txtName2nd.RightMargin = 10;
+            this.txtName2nd.Size = new System.Drawing.Size(353, 20);
+            this.txtName2nd.TabIndex = 1;
+            this.txtName2nd.Text = "001-2023";
+            this.txtName2nd.WordWrap = false;
+            // 
+            // txtPage
+            // 
+            this.txtPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPage.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPage.Location = new System.Drawing.Point(10, 5);
+            this.txtPage.Multiline = false;
+            this.txtPage.Name = "txtPage";
+            this.txtPage.ReadOnly = true;
+            this.txtPage.RightMargin = 10;
+            this.txtPage.Size = new System.Drawing.Size(278, 20);
+            this.txtPage.TabIndex = 1;
+            this.txtPage.Text = "001-2023";
+            this.txtPage.WordWrap = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(89, 196);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 22);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Case #\r\n";
             // 
             // cmbNature
             // 
@@ -163,431 +541,134 @@
             "Contract Issues",
             "Unmaterialized Agreements",
             "Property Related Concerns"});
-            this.cmbNature.Location = new System.Drawing.Point(103, 168);
+            this.cmbNature.Location = new System.Drawing.Point(104, 154);
             this.cmbNature.Name = "cmbNature";
             this.cmbNature.Size = new System.Drawing.Size(293, 30);
-            this.cmbNature.TabIndex = 6;
+            this.cmbNature.TabIndex = 46;
             this.cmbNature.Text = "--Select one--";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(88, 143);
+            this.label2.Location = new System.Drawing.Point(89, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 22);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 45;
             this.label2.Text = "Nature of Dispute";
             // 
-            // label3
+            // cmbBlotterType
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(88, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Case #\r\n";
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Controls.Add(this.panel3);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.panel2);
-            this.panel6.Location = new System.Drawing.Point(539, 40);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(628, 304);
-            this.panel6.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(57, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 22);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Contact #";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(57, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 22);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Age";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel5.Controls.Add(this.richTextBox5);
-            this.panel5.Location = new System.Drawing.Point(142, 215);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel5.Size = new System.Drawing.Size(341, 35);
-            this.panel5.TabIndex = 21;
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox5.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox5.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox5.Multiline = false;
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.RightMargin = 10;
-            this.richTextBox5.Size = new System.Drawing.Size(326, 20);
-            this.richTextBox5.TabIndex = 1;
-            this.richTextBox5.Text = "001-2023";
-            this.richTextBox5.WordWrap = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(57, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 22);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Address";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.richTextBox4);
-            this.panel4.Location = new System.Drawing.Point(100, 166);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel4.Size = new System.Drawing.Size(127, 35);
-            this.panel4.TabIndex = 17;
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox4.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox4.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox4.Multiline = false;
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.RightMargin = 10;
-            this.richTextBox4.Size = new System.Drawing.Size(112, 20);
-            this.richTextBox4.TabIndex = 1;
-            this.richTextBox4.Text = "001-2023";
-            this.richTextBox4.WordWrap = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel3.Controls.Add(this.richTextBox3);
-            this.panel3.Location = new System.Drawing.Point(130, 120);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel3.Size = new System.Drawing.Size(353, 35);
-            this.panel3.TabIndex = 18;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox3.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox3.Multiline = false;
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.RightMargin = 10;
-            this.richTextBox3.Size = new System.Drawing.Size(338, 20);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "001-2023";
-            this.richTextBox3.WordWrap = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(57, 77);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 22);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(110, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(222, 27);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "First Party Information";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel2.Controls.Add(this.richTextBox2);
-            this.panel2.Location = new System.Drawing.Point(115, 73);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel2.Size = new System.Drawing.Size(368, 35);
-            this.panel2.TabIndex = 15;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox2.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox2.Multiline = false;
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.RightMargin = 10;
-            this.richTextBox2.Size = new System.Drawing.Size(353, 20);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "001-2023";
-            this.richTextBox2.WordWrap = false;
+            this.cmbBlotterType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.cmbBlotterType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbBlotterType.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbBlotterType.FormattingEnabled = true;
+            this.cmbBlotterType.ItemHeight = 22;
+            this.cmbBlotterType.Items.AddRange(new object[] {
+            "FOR THE RECORD",
+            "AGREEMENT",
+            "CASE NUMBER"});
+            this.cmbBlotterType.Location = new System.Drawing.Point(104, 81);
+            this.cmbBlotterType.Name = "cmbBlotterType";
+            this.cmbBlotterType.Size = new System.Drawing.Size(293, 30);
+            this.cmbBlotterType.TabIndex = 44;
+            this.cmbBlotterType.Text = "--Select one--";
             // 
             // panel7
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Location = new System.Drawing.Point(539, 342);
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.panel7.Controls.Add(this.txtPage);
+            this.panel7.Location = new System.Drawing.Point(104, 222);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(628, 304);
-            this.panel7.TabIndex = 23;
+            this.panel7.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.panel7.Size = new System.Drawing.Size(293, 35);
+            this.panel7.TabIndex = 43;
             // 
-            // label9
+            // label1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(57, 218);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 22);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Contact #";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(89, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 22);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Blotter Type";
             // 
-            // label10
+            // dateFirstHearing
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(57, 168);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 22);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Age";
+            this.dateFirstHearing.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.dateFirstHearing.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.dateFirstHearing.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateFirstHearing.Location = new System.Drawing.Point(114, 445);
+            this.dateFirstHearing.Name = "dateFirstHearing";
+            this.dateFirstHearing.Size = new System.Drawing.Size(288, 25);
+            this.dateFirstHearing.TabIndex = 55;
+            this.dateFirstHearing.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // panel8
+            // label16
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel8.Controls.Add(this.richTextBox6);
-            this.panel8.Location = new System.Drawing.Point(142, 215);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel8.Size = new System.Drawing.Size(341, 35);
-            this.panel8.TabIndex = 21;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(94, 423);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(172, 22);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "Schedule First Hearing\r\n";
             // 
-            // richTextBox6
+            // cmbStatus
             // 
-            this.richTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox6.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox6.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox6.Multiline = false;
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.RightMargin = 10;
-            this.richTextBox6.Size = new System.Drawing.Size(326, 20);
-            this.richTextBox6.TabIndex = 1;
-            this.richTextBox6.Text = "001-2023";
-            this.richTextBox6.WordWrap = false;
+            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStatus.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.ItemHeight = 22;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "CASE SOLVED",
+            "WITHDRAWN",
+            "CERTIFIED CASES",
+            "PENDING",
+            "REFERRED"});
+            this.cmbStatus.Location = new System.Drawing.Point(256, 508);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(146, 30);
+            this.cmbStatus.TabIndex = 58;
+            this.cmbStatus.Text = "--Select one--";
             // 
-            // label11
+            // label17
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(57, 123);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 22);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Address";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(346, 483);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 22);
+            this.label17.TabIndex = 57;
+            this.label17.Text = "Status";
             // 
-            // panel9
+            // button2
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel9.Controls.Add(this.richTextBox7);
-            this.panel9.Location = new System.Drawing.Point(100, 166);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel9.Size = new System.Drawing.Size(127, 35);
-            this.panel9.TabIndex = 17;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(401, 594);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 38);
+            this.button2.TabIndex = 59;
+            this.button2.Text = "Save Record";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // richTextBox7
+            // txtWarning
             // 
-            this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox7.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox7.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox7.Multiline = false;
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.RightMargin = 10;
-            this.richTextBox7.Size = new System.Drawing.Size(112, 20);
-            this.richTextBox7.TabIndex = 1;
-            this.richTextBox7.Text = "001-2023";
-            this.richTextBox7.WordWrap = false;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel10.Controls.Add(this.richTextBox8);
-            this.panel10.Location = new System.Drawing.Point(130, 120);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel10.Size = new System.Drawing.Size(353, 35);
-            this.panel10.TabIndex = 18;
-            // 
-            // richTextBox8
-            // 
-            this.richTextBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox8.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox8.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox8.Multiline = false;
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.RightMargin = 10;
-            this.richTextBox8.Size = new System.Drawing.Size(338, 20);
-            this.richTextBox8.TabIndex = 1;
-            this.richTextBox8.Text = "001-2023";
-            this.richTextBox8.WordWrap = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(57, 77);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 22);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Open Sans SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(110, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(248, 27);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Second Party Information";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel11.Controls.Add(this.richTextBox9);
-            this.panel11.Location = new System.Drawing.Point(115, 73);
-            this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel11.Size = new System.Drawing.Size(368, 35);
-            this.panel11.TabIndex = 15;
-            // 
-            // richTextBox9
-            // 
-            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox9.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox9.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox9.Multiline = false;
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.RightMargin = 10;
-            this.richTextBox9.Size = new System.Drawing.Size(353, 20);
-            this.richTextBox9.TabIndex = 1;
-            this.richTextBox9.Text = "001-2023";
-            this.richTextBox9.WordWrap = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(88, 284);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 22);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Page #";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel12.Controls.Add(this.richTextBox10);
-            this.panel12.Location = new System.Drawing.Point(103, 309);
-            this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel12.Size = new System.Drawing.Size(293, 35);
-            this.panel12.TabIndex = 24;
-            // 
-            // richTextBox10
-            // 
-            this.richTextBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox10.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox10.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox10.Multiline = false;
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.RightMargin = 10;
-            this.richTextBox10.Size = new System.Drawing.Size(278, 20);
-            this.richTextBox10.TabIndex = 1;
-            this.richTextBox10.Text = "001-2023";
-            this.richTextBox10.WordWrap = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(88, 366);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 22);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Blotter Record Photo";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(113, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 38);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Select image";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblSelectedImage
-            // 
-            this.lblSelectedImage.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectedImage.Location = new System.Drawing.Point(237, 400);
-            this.lblSelectedImage.Name = "lblSelectedImage";
-            this.lblSelectedImage.Size = new System.Drawing.Size(226, 51);
-            this.lblSelectedImage.TabIndex = 28;
-            this.lblSelectedImage.Text = "No selected image";
+            this.txtWarning.AutoSize = true;
+            this.txtWarning.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtWarning.ForeColor = System.Drawing.Color.DarkRed;
+            this.txtWarning.Location = new System.Drawing.Point(212, 606);
+            this.txtWarning.Name = "txtWarning";
+            this.txtWarning.Size = new System.Drawing.Size(190, 16);
+            this.txtWarning.TabIndex = 60;
+            this.txtWarning.Text = "Fill all the required fields first";
             // 
             // AddNewReport
             // 
@@ -595,35 +676,43 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1256, 658);
+            this.Controls.Add(this.txtWarning);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.dateFirstHearing);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.lblSelectedImage);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbNature);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbBlotterType);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
             this.Name = "AddNewReport";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "AddNewReport";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.AddNewReport_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panel12.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,46 +720,53 @@
 
         #endregion
 
-        private Label label1;
-        private RichTextBox richTextBox1;
-        private Panel panel1;
-        private ComboBox cmbBlotterType;
-        private ComboBox cmbNature;
-        private Label label2;
-        private Label label3;
         private Panel panel6;
         private Label label8;
         private Label label7;
         private Panel panel5;
-        private RichTextBox richTextBox5;
+        private RichTextBox txtPhone1st;
         private Label label6;
         private Panel panel4;
-        private RichTextBox richTextBox4;
+        private RichTextBox txtAge1st;
         private Panel panel3;
-        private RichTextBox richTextBox3;
+        private RichTextBox txtAddress1st;
         private Label label5;
         private Label label4;
         private Panel panel2;
-        private RichTextBox richTextBox2;
-        private Panel panel7;
-        private Label label9;
-        private Label label10;
-        private Panel panel8;
-        private RichTextBox richTextBox6;
-        private Label label11;
-        private Panel panel9;
-        private RichTextBox richTextBox7;
-        private Panel panel10;
-        private RichTextBox richTextBox8;
-        private Label label12;
-        private Label label13;
-        private Panel panel11;
-        private RichTextBox richTextBox9;
+        private RichTextBox txtName1st;
+        private Label lblSelectedImage;
+        private Button button1;
+        private Label label15;
         private Label label14;
         private Panel panel12;
-        private RichTextBox richTextBox10;
-        private Label label15;
-        private Button button1;
-        private Label lblSelectedImage;
+        private RichTextBox txtCaseNo;
+        private Panel panel8;
+        private Label label9;
+        private Label label10;
+        private Panel panel9;
+        private RichTextBox txtPhone2nd;
+        private Label label11;
+        private Panel panel10;
+        private RichTextBox txtAge2nd;
+        private Panel panel11;
+        private RichTextBox txtAddress2nd;
+        private Label label12;
+        private Label label13;
+        private Panel panel13;
+        private RichTextBox txtName2nd;
+        private RichTextBox txtPage;
+        private Label label3;
+        private ComboBox cmbNature;
+        private Label label2;
+        private ComboBox cmbBlotterType;
+        private Panel panel7;
+        private Label label1;
+        private DateTimePicker dateFirstHearing;
+        private Label label16;
+        private ComboBox comboBox1;
+        private Label label17;
+        private ComboBox cmbStatus;
+        private Button button2;
+        private Label txtWarning;
     }
 }

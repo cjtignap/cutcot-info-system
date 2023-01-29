@@ -1,4 +1,7 @@
+using cutcot_info_system.models;
+using cutcot_info_system.mysql_things;
 using Microsoft.VisualBasic.Devices;
+using MySql.Data.MySqlClient;
 
 namespace cutcot_info_system
 {
@@ -7,7 +10,7 @@ namespace cutcot_info_system
         public Form1()
         {
             InitializeComponent();
-
+            
         }
 
      
