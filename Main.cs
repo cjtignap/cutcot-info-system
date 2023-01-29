@@ -16,6 +16,8 @@ namespace cutcot_info_system
     public partial class Main : Form
     {
         private Form activeForm;
+        private Button activeButton;
+        private String activeFormName;
 
         public Main()
         {
@@ -25,19 +27,85 @@ namespace cutcot_info_system
 
         
        
-        private void OpenChildForm(Form childForm)
+        private void OpenChildForm(Form childForm, object sender, string formName)
         {
-            if (activeForm != null)
+            if (activeForm != null&& formName != activeFormName)
+            {
                 activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.pnlParent.Controls.Add(childForm);
-            this.pnlParent.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            }
+
+            if (formName != activeFormName)
+            {
+
+                activeForm = childForm;
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                this.pnlParent.Controls.Add(childForm);
+                this.pnlParent.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+            }
+
+
+            lblHeader.Text = formName;
+            resetColors();
+
+            if (activeFormName != formName)
+            {
+                if (formName == "Dashboard")
+                {
+                    btnDashboard.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMiniDashboard.BackColor = Color.FromArgb(142, 167, 233);
+                }
+                else if(formName == "Add new report") {
+                    btnMiniAddNewReports.BackColor = Color.FromArgb(142, 167, 233);
+                    btnAddNewReport.BackColor = Color.FromArgb(142, 167, 233);
+                }
+                else if (formName == "Process document")
+                {
+                    btnProcessDoc.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMiniProcesssDoc.BackColor = Color.FromArgb(142, 167, 233);
+
+                }
+                else if (formName== "Reports")
+                {
+                    btnReports.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMiniReports.BackColor = Color.FromArgb(142, 167, 233); 
+
+                }
+                else if (formName== "Document queue")
+                {
+                    btnDocQueue.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMinDocQueue.BackColor = Color.FromArgb(142, 167, 233);
+                }
+                else if (formName =="Document history")
+                {
+                    btnMiniDocHistory.BackColor = Color.FromArgb(142, 167, 233);
+                    btnAddDoc.BackColor = Color.FromArgb(142, 167, 233);
+                }
+                activeFormName = formName;
+
+            }
+            
         }
+
+        private void resetColors()
+        {
+            btnMiniDashboard.BackColor = Color.FromArgb(114, 134, 211);
+            btnDashboard.BackColor = Color.FromArgb(114, 134, 211);
+            btnMiniAddNewReports.BackColor = Color.FromArgb(114, 134, 211);
+            btnAddNewReport.BackColor = Color.FromArgb(114, 134, 211);
+            btnMiniProcesssDoc.BackColor = Color.FromArgb(114, 134, 211);
+            btnProcessDoc.BackColor = Color.FromArgb(114, 134, 211);
+            btnMiniReports.BackColor = Color.FromArgb(114, 134, 211);
+            btnReports.BackColor = Color.FromArgb(114, 134, 211);
+            btnMinDocQueue.BackColor = Color.FromArgb(114, 134, 211);
+            btnDocQueue.BackColor = Color.FromArgb(114, 134, 211);
+            btnMiniDocHistory.BackColor = Color.FromArgb(114, 134, 211);
+            btnAddDoc.BackColor = Color.FromArgb(114, 134, 211);
+        }
+
         private void collapse()
         {
             btnCollapse.Image = global::cutcot_info_system.Properties.Resources.collapse2;
@@ -68,73 +136,103 @@ namespace cutcot_info_system
         private void button7_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
-            OpenChildForm(dashboard);
+            OpenChildForm(dashboard,sender, "Dashboard");
+            this.Focus();
         }
 
         private void btnMiniDashboard_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
-            OpenChildForm(dashboard);
+            OpenChildForm(dashboard, sender, "Dashboard");
+
+            this.Focus();
         }
 
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            Reports reports = new Reports();
-            OpenChildForm(reports);
-        }
+     
 
-        private void btnMiniReports_Click(object sender, EventArgs e)
-        {
-            Reports reports = new Reports();
-            OpenChildForm(reports);
-        }
-
+  
         private void btnAddNewReport_Click(object sender, EventArgs e)
         {
             AddNewReport addNewReport = new AddNewReport();
-            OpenChildForm(addNewReport);
+            OpenChildForm(addNewReport, sender,"Add new report");
+            this.Focus();
         }
 
         private void btnMiniAddNewReports_Click(object sender, EventArgs e)
         {
             AddNewReport addNewReport = new AddNewReport();
-            OpenChildForm(addNewReport);
+            OpenChildForm(addNewReport, sender,"Add new report");
+            this.Focus();
         }
 
-        private void btnAddDoc_Click(object sender, EventArgs e)
-        {
-            DocumentHistory documentHistory = new DocumentHistory();
-            OpenChildForm(documentHistory);
-        }
+       
 
-        private void btnMiniDocHistory_Click(object sender, EventArgs e)
-        {
-            DocumentHistory documentHistory = new DocumentHistory();
-            OpenChildForm(documentHistory);
-        }
+        
 
-        private void btnDocQueue_Click(object sender, EventArgs e)
-        {
-            DocumentQueue documentQueue = new DocumentQueue();
-            OpenChildForm(documentQueue);
-        }
-
-        private void btnMinDocQueue_Click(object sender, EventArgs e)
-        {
-            DocumentQueue documentQueue = new DocumentQueue();
-            OpenChildForm(documentQueue);
-        }
-
+       
         private void btnProcessDoc_Click(object sender, EventArgs e)
         {
             ProcessDocument processDocument = new ProcessDocument();
-            OpenChildForm(processDocument);
+            OpenChildForm(processDocument, sender,"Process document");
+            this.Focus();
         }
 
         private void btnMiniProcesssDoc_Click(object sender, EventArgs e)
         {
             ProcessDocument processDocument = new ProcessDocument();
-            OpenChildForm(processDocument);
+            OpenChildForm(processDocument, sender,"Process document");
+            this.Focus();
+        }
+
+        private void btnReports_Click_1(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            OpenChildForm(reports, sender,"Reports");
+
+            this.Focus();
+        }
+
+        private void btnMiniReports_Click_1(object sender, EventArgs e)
+        {
+            Reports reports = new Reports();
+            OpenChildForm(reports, sender,"Reports");
+
+            this.Focus();
+        }
+
+        private void btnDocQueue_Click_1(object sender, EventArgs e)
+        {
+            DocumentQueue documentQueue = new DocumentQueue();
+            OpenChildForm(documentQueue, sender,"Document queue");
+            this.Focus();
+        }
+
+        private void btnMinDocQueue_Click_1(object sender, EventArgs e)
+        {
+            DocumentQueue documentQueue = new DocumentQueue();
+            OpenChildForm(documentQueue, sender,"Document queue");
+            this.Focus();
+        }
+
+        private void btnAddDoc_Click_1(object sender, EventArgs e)
+        {
+            DocumentHistory documentHistory = new DocumentHistory();
+            OpenChildForm(documentHistory, sender,"Document history");
+            this.Focus();
+        }
+
+        private void btnMiniDocHistory_Click_1(object sender, EventArgs e)
+        {
+            DocumentHistory documentHistory = new DocumentHistory();
+            OpenChildForm(documentHistory, sender,"Document history");
+            this.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
         }
     }
 }
