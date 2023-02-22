@@ -1,6 +1,6 @@
-﻿namespace cutcot_info_system.forms
+﻿namespace cutcot_info_system.child_forms
 {
-    partial class AddNewReport
+    partial class ViewReport
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtName1st = new System.Windows.Forms.RichTextBox();
-            this.lblSelectedImage = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.txtCaseNo = new System.Windows.Forms.RichTextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,31 +56,31 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtName2nd = new System.Windows.Forms.RichTextBox();
-            this.txtPage = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbNature = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbBlotterType = new System.Windows.Forms.ComboBox();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateFirstHearing = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtWarning = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtBlotterType = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNature = new System.Windows.Forms.Label();
+            this.txtCase = new System.Windows.Forms.Label();
+            this.txtPage = new System.Windows.Forms.Label();
+            this.txtDateSaved = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -101,10 +95,10 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.panel2);
-            this.panel6.Location = new System.Drawing.Point(574, 26);
+            this.panel6.Location = new System.Drawing.Point(598, 12);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(628, 304);
-            this.panel6.TabIndex = 48;
+            this.panel6.TabIndex = 50;
             // 
             // label8
             // 
@@ -148,7 +142,7 @@
             this.txtPhone1st.RightMargin = 10;
             this.txtPhone1st.Size = new System.Drawing.Size(326, 20);
             this.txtPhone1st.TabIndex = 1;
-            this.txtPhone1st.Text = "8888";
+            this.txtPhone1st.Text = "001-2023";
             this.txtPhone1st.WordWrap = false;
             // 
             // label6
@@ -253,74 +247,8 @@
             this.txtName1st.RightMargin = 10;
             this.txtName1st.Size = new System.Drawing.Size(353, 20);
             this.txtName1st.TabIndex = 1;
-            this.txtName1st.Text = "Reynaldo San Pedro";
+            this.txtName1st.Text = "001-2023";
             this.txtName1st.WordWrap = false;
-            // 
-            // lblSelectedImage
-            // 
-            this.lblSelectedImage.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectedImage.Location = new System.Drawing.Point(238, 379);
-            this.lblSelectedImage.Name = "lblSelectedImage";
-            this.lblSelectedImage.Size = new System.Drawing.Size(226, 51);
-            this.lblSelectedImage.TabIndex = 54;
-            this.lblSelectedImage.Text = "No selected image";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(114, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 38);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Select image";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(89, 345);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(161, 22);
-            this.label15.TabIndex = 52;
-            this.label15.Text = "Blotter Record Photo";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(89, 270);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 22);
-            this.label14.TabIndex = 51;
-            this.label14.Text = "Page #";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel12.Controls.Add(this.txtCaseNo);
-            this.panel12.Location = new System.Drawing.Point(104, 295);
-            this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel12.Size = new System.Drawing.Size(293, 35);
-            this.panel12.TabIndex = 50;
-            // 
-            // txtCaseNo
-            // 
-            this.txtCaseNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.txtCaseNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCaseNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCaseNo.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCaseNo.Location = new System.Drawing.Point(10, 5);
-            this.txtCaseNo.Multiline = false;
-            this.txtCaseNo.Name = "txtCaseNo";
-            this.txtCaseNo.RightMargin = 10;
-            this.txtCaseNo.Size = new System.Drawing.Size(278, 20);
-            this.txtCaseNo.TabIndex = 1;
-            this.txtCaseNo.Text = "23";
-            this.txtCaseNo.WordWrap = false;
             // 
             // panel8
             // 
@@ -334,10 +262,10 @@
             this.panel8.Controls.Add(this.label12);
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.panel13);
-            this.panel8.Location = new System.Drawing.Point(574, 328);
+            this.panel8.Location = new System.Drawing.Point(598, 314);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(628, 304);
-            this.panel8.TabIndex = 49;
+            this.panel8.TabIndex = 51;
             // 
             // label9
             // 
@@ -381,7 +309,7 @@
             this.txtPhone2nd.RightMargin = 10;
             this.txtPhone2nd.Size = new System.Drawing.Size(326, 20);
             this.txtPhone2nd.TabIndex = 1;
-            this.txtPhone2nd.Text = "1234";
+            this.txtPhone2nd.Text = "001-2023";
             this.txtPhone2nd.WordWrap = false;
             // 
             // label11
@@ -441,7 +369,7 @@
             this.txtAddress2nd.RightMargin = 10;
             this.txtAddress2nd.Size = new System.Drawing.Size(338, 20);
             this.txtAddress2nd.TabIndex = 1;
-            this.txtAddress2nd.Text = "Cutcot Calumpit";
+            this.txtAddress2nd.Text = "001-2023";
             this.txtAddress2nd.WordWrap = false;
             // 
             // label12
@@ -486,233 +414,186 @@
             this.txtName2nd.RightMargin = 10;
             this.txtName2nd.Size = new System.Drawing.Size(353, 20);
             this.txtName2nd.TabIndex = 1;
-            this.txtName2nd.Text = "Khen Manio";
+            this.txtName2nd.Text = "001-2023";
             this.txtName2nd.WordWrap = false;
             // 
-            // txtPage
+            // label14
             // 
-            this.txtPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.txtPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPage.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPage.Location = new System.Drawing.Point(10, 5);
-            this.txtPage.Multiline = false;
-            this.txtPage.Name = "txtPage";
-            this.txtPage.ReadOnly = true;
-            this.txtPage.RightMargin = 10;
-            this.txtPage.Size = new System.Drawing.Size(278, 20);
-            this.txtPage.TabIndex = 1;
-            this.txtPage.Text = "001-2023";
-            this.txtPage.WordWrap = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(89, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 22);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Case #\r\n";
-            // 
-            // cmbNature
-            // 
-            this.cmbNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.cmbNature.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbNature.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbNature.FormattingEnabled = true;
-            this.cmbNature.ItemHeight = 22;
-            this.cmbNature.Items.AddRange(new object[] {
-            "For the Record Purposes only",
-            "Financial Obligation",
-            "VAW",
-            "VAC",
-            "Slight Phyical Injury?",
-            "Verbal Abuse",
-            "Theft",
-            "Misunderstanding",
-            "Miscommunication",
-            "Labor Disputes",
-            "Nature Abuses",
-            "Disobedience",
-            "Business Related Disputes",
-            "Management Disputes",
-            "Damage to Property",
-            "Contract Issues",
-            "Unmaterialized Agreements",
-            "Property Related Concerns"});
-            this.cmbNature.Location = new System.Drawing.Point(104, 154);
-            this.cmbNature.Name = "cmbNature";
-            this.cmbNature.Size = new System.Drawing.Size(293, 30);
-            this.cmbNature.TabIndex = 46;
-            this.cmbNature.Text = "--Select one--";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(58, 172);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 22);
+            this.label14.TabIndex = 55;
+            this.label14.Text = "Page # :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(89, 129);
+            this.label2.Location = new System.Drawing.Point(58, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 22);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Nature of Dispute";
-            // 
-            // cmbBlotterType
-            // 
-            this.cmbBlotterType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.cmbBlotterType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBlotterType.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbBlotterType.FormattingEnabled = true;
-            this.cmbBlotterType.ItemHeight = 22;
-            this.cmbBlotterType.Items.AddRange(new object[] {
-            "FOR THE RECORD",
-            "AGREEMENT",
-            "CASE NUMBER"});
-            this.cmbBlotterType.Location = new System.Drawing.Point(104, 81);
-            this.cmbBlotterType.Name = "cmbBlotterType";
-            this.cmbBlotterType.Size = new System.Drawing.Size(293, 30);
-            this.cmbBlotterType.TabIndex = 44;
-            this.cmbBlotterType.Text = "--Select one--";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel7.Controls.Add(this.txtPage);
-            this.panel7.Location = new System.Drawing.Point(104, 222);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
-            this.panel7.Size = new System.Drawing.Size(293, 35);
-            this.panel7.TabIndex = 43;
+            this.label2.Size = new System.Drawing.Size(152, 22);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Nature of Dispute : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(89, 56);
+            this.label1.Location = new System.Drawing.Point(58, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 22);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Blotter Type";
+            this.label1.Size = new System.Drawing.Size(110, 22);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Blotter Type : ";
             // 
-            // dateFirstHearing
+            // label15
             // 
-            this.dateFirstHearing.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.dateFirstHearing.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.dateFirstHearing.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateFirstHearing.Location = new System.Drawing.Point(114, 445);
-            this.dateFirstHearing.Name = "dateFirstHearing";
-            this.dateFirstHearing.Size = new System.Drawing.Size(288, 25);
-            this.dateFirstHearing.TabIndex = 55;
-            this.dateFirstHearing.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(58, 199);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 22);
+            this.label15.TabIndex = 56;
+            this.label15.Text = "Date Saved :";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(94, 423);
+            this.label16.Location = new System.Drawing.Point(58, 256);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(172, 22);
-            this.label16.TabIndex = 56;
-            this.label16.Text = "Schedule First Hearing\r\n";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.cmbStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbStatus.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.ItemHeight = 22;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "CASE SOLVED",
-            "WITHDRAWN",
-            "CERTIFIED CASES",
-            "PENDING",
-            "REFERRED"});
-            this.cmbStatus.Location = new System.Drawing.Point(256, 508);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(146, 30);
-            this.cmbStatus.TabIndex = 58;
-            this.cmbStatus.Text = "--Select one--";
+            this.label16.Size = new System.Drawing.Size(107, 22);
+            this.label16.TabIndex = 57;
+            this.label16.Text = "Record Photo";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(346, 483);
+            this.label17.Location = new System.Drawing.Point(58, 228);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 22);
-            this.label17.TabIndex = 57;
-            this.label17.Text = "Status";
+            this.label17.Size = new System.Drawing.Size(68, 22);
+            this.label17.TabIndex = 58;
+            this.label17.Text = "Status : ";
             // 
-            // txtWarning
+            // txtBlotterType
             // 
-            this.txtWarning.AutoSize = true;
-            this.txtWarning.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtWarning.ForeColor = System.Drawing.Color.DarkRed;
-            this.txtWarning.Location = new System.Drawing.Point(240, 572);
-            this.txtWarning.Name = "txtWarning";
-            this.txtWarning.Size = new System.Drawing.Size(190, 16);
-            this.txtWarning.TabIndex = 60;
-            this.txtWarning.Text = "Fill all the required fields first";
+            this.txtBlotterType.AutoSize = true;
+            this.txtBlotterType.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBlotterType.Location = new System.Drawing.Point(174, 89);
+            this.txtBlotterType.Name = "txtBlotterType";
+            this.txtBlotterType.Size = new System.Drawing.Size(61, 22);
+            this.txtBlotterType.TabIndex = 59;
+            this.txtBlotterType.Text = "label18";
             // 
-            // button2
+            // label3
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(436, 560);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 38);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Save Record";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(58, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 22);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Case # : ";
             // 
-            // AddNewReport
+            // txtNature
+            // 
+            this.txtNature.AutoSize = true;
+            this.txtNature.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNature.Location = new System.Drawing.Point(216, 122);
+            this.txtNature.Name = "txtNature";
+            this.txtNature.Size = new System.Drawing.Size(61, 22);
+            this.txtNature.TabIndex = 61;
+            this.txtNature.Text = "label19";
+            // 
+            // txtCase
+            // 
+            this.txtCase.AutoSize = true;
+            this.txtCase.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCase.Location = new System.Drawing.Point(135, 146);
+            this.txtCase.Name = "txtCase";
+            this.txtCase.Size = new System.Drawing.Size(61, 22);
+            this.txtCase.TabIndex = 62;
+            this.txtCase.Text = "label20";
+            // 
+            // txtPage
+            // 
+            this.txtPage.AutoSize = true;
+            this.txtPage.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPage.Location = new System.Drawing.Point(135, 172);
+            this.txtPage.Name = "txtPage";
+            this.txtPage.Size = new System.Drawing.Size(61, 22);
+            this.txtPage.TabIndex = 63;
+            this.txtPage.Text = "label21";
+            // 
+            // txtDateSaved
+            // 
+            this.txtDateSaved.AutoSize = true;
+            this.txtDateSaved.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDateSaved.Location = new System.Drawing.Point(164, 199);
+            this.txtDateSaved.Name = "txtDateSaved";
+            this.txtDateSaved.Size = new System.Drawing.Size(61, 22);
+            this.txtDateSaved.TabIndex = 64;
+            this.txtDateSaved.Text = "label22";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.AutoSize = true;
+            this.txtStatus.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtStatus.Location = new System.Drawing.Point(132, 228);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(61, 22);
+            this.txtStatus.TabIndex = 65;
+            this.txtStatus.Text = "label23";
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Image = global::cutcot_info_system.Properties.Resources.undraw_Maintenance_re_59vn_removebg_preview;
+            this.pictureBox.Location = new System.Drawing.Point(68, 281);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(500, 353);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 66;
+            this.pictureBox.TabStop = false;
+            // 
+            // ViewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1256, 630);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtWarning);
-            this.Controls.Add(this.cmbStatus);
+            this.ClientSize = new System.Drawing.Size(1256, 658);
+            this.Controls.Add(this.pictureBox);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtDateSaved);
+            this.Controls.Add(this.txtPage);
+            this.Controls.Add(this.txtCase);
+            this.Controls.Add(this.txtNature);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtBlotterType);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.dateFirstHearing);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.lblSelectedImage);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbNature);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbBlotterType);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
-            this.Name = "AddNewReport";
-            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.Text = "AddNewReport";
-            this.Load += new System.EventHandler(this.AddNewReport_Load);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel8);
+            this.Name = "ViewReport";
+            this.Text = "ViewReport";
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -734,12 +615,6 @@
         private Label label4;
         private Panel panel2;
         private RichTextBox txtName1st;
-        private Label lblSelectedImage;
-        private Button button1;
-        private Label label15;
-        private Label label14;
-        private Panel panel12;
-        private RichTextBox txtCaseNo;
         private Panel panel8;
         private Label label9;
         private Label label10;
@@ -754,19 +629,19 @@
         private Label label13;
         private Panel panel13;
         private RichTextBox txtName2nd;
-        private RichTextBox txtPage;
-        private Label label3;
-        private ComboBox cmbNature;
+        private Label label14;
         private Label label2;
-        private ComboBox cmbBlotterType;
-        private Panel panel7;
         private Label label1;
-        private DateTimePicker dateFirstHearing;
+        private Label label15;
         private Label label16;
-        private ComboBox comboBox1;
         private Label label17;
-        private ComboBox cmbStatus;
-        private Label txtWarning;
-        private Button button2;
+        private Label txtBlotterType;
+        private Label label3;
+        private Label txtNature;
+        private Label txtCase;
+        private Label txtPage;
+        private Label txtDateSaved;
+        private Label txtStatus;
+        private PictureBox pictureBox;
     }
 }

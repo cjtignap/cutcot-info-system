@@ -1,6 +1,7 @@
 ﻿
 using cutcot_info_system.child_forms;
 using cutcot_info_system.forms;
+using cutcot_info_system.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,15 +75,20 @@ namespace cutcot_info_system
                     btnMiniReports.BackColor = Color.FromArgb(142, 167, 233); 
 
                 }
-                else if (formName== "Document queue")
+                else if (formName== "Request Document")
                 {
-                    btnDocQueue.BackColor = Color.FromArgb(142, 167, 233);
-                    btnMinDocQueue.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMiniDocHistory.BackColor = Color.FromArgb(142, 167, 233);
+                    btnAddDoc.BackColor = Color.FromArgb(142, 167, 233);
                 }
                 else if (formName =="Document history")
                 {
                     btnMiniDocHistory.BackColor = Color.FromArgb(142, 167, 233);
                     btnAddDoc.BackColor = Color.FromArgb(142, 167, 233);
+                }
+                else if (formName == "Document Queue")
+                {
+                    btnDocQueue.BackColor = Color.FromArgb(142, 167, 233);
+                    btnMinDocQueue.BackColor = Color.FromArgb(142, 167, 233);
                 }
                 activeFormName = formName;
 
@@ -203,28 +209,28 @@ namespace cutcot_info_system
         private void btnDocQueue_Click_1(object sender, EventArgs e)
         {
             DocumentQueue documentQueue = new DocumentQueue();
-            OpenChildForm(documentQueue, sender,"Document queue");
+            OpenChildForm(documentQueue, sender, "Document Queue");
             this.Focus();
         }
 
         private void btnMinDocQueue_Click_1(object sender, EventArgs e)
         {
             DocumentQueue documentQueue = new DocumentQueue();
-            OpenChildForm(documentQueue, sender,"Document queue");
+            OpenChildForm(documentQueue, sender, "Document Queue");
             this.Focus();
         }
 
         private void btnAddDoc_Click_1(object sender, EventArgs e)
         {
-            DocumentHistory documentHistory = new DocumentHistory();
-            OpenChildForm(documentHistory, sender,"Document history");
+            RequestDocument documentQueue = new RequestDocument();
+            OpenChildForm(documentQueue, sender, "Request Document");
             this.Focus();
         }
 
         private void btnMiniDocHistory_Click_1(object sender, EventArgs e)
         {
-            DocumentHistory documentHistory = new DocumentHistory();
-            OpenChildForm(documentHistory, sender,"Document history");
+            RequestDocument documentQueue = new RequestDocument();
+            OpenChildForm(documentQueue, sender, "Request Document");
             this.Focus();
         }
 

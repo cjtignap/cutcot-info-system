@@ -1,8 +1,8 @@
+using cutcot_info_system.custom_controls;
 using cutcot_info_system.models;
 using cutcot_info_system.mysql_things;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
-
 namespace cutcot_info_system
 {
     public partial class Form1 : Form
@@ -10,7 +10,7 @@ namespace cutcot_info_system
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
      
@@ -27,6 +27,7 @@ namespace cutcot_info_system
         {
             Main main = new Main();
             main.Show();
+
             this.Hide();
         }
     }

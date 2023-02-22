@@ -82,20 +82,24 @@ namespace cutcot_info_system.forms
             }
         }
       
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-           
+        
 
+        private void AddNewReport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
             //basic validation
-            if (string.IsNullOrEmpty(txtCaseNo.Text )||
-                string.IsNullOrEmpty(selectedImage)||
+            if (string.IsNullOrEmpty(txtCaseNo.Text) ||
+                string.IsNullOrEmpty(selectedImage) ||
                 string.IsNullOrEmpty(txtName1st.Text) ||
-                string.IsNullOrEmpty(txtAge1st.Text )||
+                string.IsNullOrEmpty(txtAge1st.Text) ||
                 string.IsNullOrEmpty(txtAddress1st.Text) ||
                 string.IsNullOrEmpty(txtPhone1st.Text) ||
                 string.IsNullOrEmpty(txtName2nd.Text) ||
-                string.IsNullOrEmpty(txtAge2nd.Text ) ||
+                string.IsNullOrEmpty(txtAge2nd.Text) ||
                 string.IsNullOrEmpty(txtAddress2nd.Text) ||
                 string.IsNullOrEmpty(txtPhone2nd.Text)
                 )
@@ -132,23 +136,18 @@ namespace cutcot_info_system.forms
 
 
                     generateFileName();
-                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName, firstHearing, firstPartyInformation, secondPartyInformation);
+                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName, firstHearing, firstPartyInformation, secondPartyInformation, DateTime.Now);
                     ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
                     reportInfoDAO.insert(reportInfo);
                     saveImage();
                 }
-                catch(Exception exc)
+                catch (Exception exc)
                 {
-                   
+
                     MessageBox.Show("Make sure to enter valid numbers");
                 }
 
             }
-        }
-
-        private void AddNewReport_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

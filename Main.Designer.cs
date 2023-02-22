@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlParent = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCollapse = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,7 +52,6 @@
             this.btnMiniAddNewReports = new System.Windows.Forms.Button();
             this.btnMiniDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlParent = new System.Windows.Forms.Panel();
             this.pnlMain.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,6 +72,15 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1424, 771);
             this.pnlMain.TabIndex = 3;
+            // 
+            // pnlParent
+            // 
+            this.pnlParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.pnlParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlParent.Location = new System.Drawing.Point(239, 94);
+            this.pnlParent.Name = "pnlParent";
+            this.pnlParent.Size = new System.Drawing.Size(1185, 677);
+            this.pnlParent.TabIndex = 12;
             // 
             // panel4
             // 
@@ -183,7 +192,7 @@
             this.btnAddDoc.Padding = new System.Windows.Forms.Padding(10);
             this.btnAddDoc.Size = new System.Drawing.Size(168, 72);
             this.btnAddDoc.TabIndex = 11;
-            this.btnAddDoc.Text = "DOCUMENT HISTORY";
+            this.btnAddDoc.Text = "REQUEST DOCUMENT";
             this.btnAddDoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddDoc.UseVisualStyleBackColor = false;
@@ -466,15 +475,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(46, 113);
             this.panel3.TabIndex = 1;
-            // 
-            // pnlParent
-            // 
-            this.pnlParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.pnlParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlParent.Location = new System.Drawing.Point(239, 94);
-            this.pnlParent.Name = "pnlParent";
-            this.pnlParent.Size = new System.Drawing.Size(1185, 677);
-            this.pnlParent.TabIndex = 12;
             // 
             // Main
             // 

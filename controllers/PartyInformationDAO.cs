@@ -55,5 +55,34 @@ namespace cutcot_info_system.models
             mySqlConnection.Close();
             return lastId;
         }
+
+        public PartyInformation getPartyInformation(string id)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+                mySqlConnection.Open();
+                string sql = "SELECT * FROM `party_information` where `party_info_id` = '" + id + "';";
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                PartyInformation partyInformation = new PartyInformation(); 
+
+                while (reader.Read())
+                {
+                    partyInformation.name = reader.GetString("name");
+                    partyInformation.contact = reader.GetString("contact");
+                    partyInformation.address = reader.GetString("address");
+                    partyInformation.age = reader.GetInt32("age");
+                }
+                reader.Close();
+                mySqlConnection.Close();
+                return partyInformation;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+                return null;
+            }
+        }
     }
 }
