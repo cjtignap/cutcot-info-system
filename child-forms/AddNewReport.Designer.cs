@@ -47,7 +47,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.txtCaseNo = new System.Windows.Forms.RichTextBox();
+            this.txtPageNo = new System.Windows.Forms.RichTextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.txtName2nd = new System.Windows.Forms.RichTextBox();
-            this.txtPage = new System.Windows.Forms.RichTextBox();
+            this.txtCaseNo = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbNature = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -300,27 +300,27 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel12.Controls.Add(this.txtCaseNo);
+            this.panel12.Controls.Add(this.txtPageNo);
             this.panel12.Location = new System.Drawing.Point(104, 295);
             this.panel12.Name = "panel12";
             this.panel12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel12.Size = new System.Drawing.Size(293, 35);
             this.panel12.TabIndex = 50;
             // 
-            // txtCaseNo
+            // txtPageNo
             // 
-            this.txtCaseNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.txtCaseNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCaseNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCaseNo.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCaseNo.Location = new System.Drawing.Point(10, 5);
-            this.txtCaseNo.Multiline = false;
-            this.txtCaseNo.Name = "txtCaseNo";
-            this.txtCaseNo.RightMargin = 10;
-            this.txtCaseNo.Size = new System.Drawing.Size(278, 20);
-            this.txtCaseNo.TabIndex = 1;
-            this.txtCaseNo.Text = "23";
-            this.txtCaseNo.WordWrap = false;
+            this.txtPageNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtPageNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPageNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPageNo.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPageNo.Location = new System.Drawing.Point(10, 5);
+            this.txtPageNo.Multiline = false;
+            this.txtPageNo.Name = "txtPageNo";
+            this.txtPageNo.RightMargin = 10;
+            this.txtPageNo.Size = new System.Drawing.Size(278, 20);
+            this.txtPageNo.TabIndex = 1;
+            this.txtPageNo.Text = "";
+            this.txtPageNo.WordWrap = false;
             // 
             // panel8
             // 
@@ -489,21 +489,21 @@
             this.txtName2nd.Text = "Khen Manio";
             this.txtName2nd.WordWrap = false;
             // 
-            // txtPage
+            // txtCaseNo
             // 
-            this.txtPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.txtPage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPage.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPage.Location = new System.Drawing.Point(10, 5);
-            this.txtPage.Multiline = false;
-            this.txtPage.Name = "txtPage";
-            this.txtPage.ReadOnly = true;
-            this.txtPage.RightMargin = 10;
-            this.txtPage.Size = new System.Drawing.Size(278, 20);
-            this.txtPage.TabIndex = 1;
-            this.txtPage.Text = "001-2023";
-            this.txtPage.WordWrap = false;
+            this.txtCaseNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.txtCaseNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCaseNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCaseNo.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCaseNo.Location = new System.Drawing.Point(10, 5);
+            this.txtCaseNo.Multiline = false;
+            this.txtCaseNo.Name = "txtCaseNo";
+            this.txtCaseNo.ReadOnly = true;
+            this.txtCaseNo.RightMargin = 10;
+            this.txtCaseNo.Size = new System.Drawing.Size(278, 20);
+            this.txtCaseNo.TabIndex = 1;
+            this.txtCaseNo.Text = "001-2023";
+            this.txtCaseNo.WordWrap = false;
             // 
             // label3
             // 
@@ -577,7 +577,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.panel7.Controls.Add(this.txtPage);
+            this.panel7.Controls.Add(this.txtCaseNo);
             this.panel7.Location = new System.Drawing.Point(104, 222);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
@@ -696,7 +696,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label1);
             this.Name = "AddNewReport";
-            this.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "AddNewReport";
             this.Load += new System.EventHandler(this.AddNewReport_Load);
             this.panel6.ResumeLayout(false);
@@ -739,7 +739,7 @@
         private Label label15;
         private Label label14;
         private Panel panel12;
-        private RichTextBox txtCaseNo;
+        private RichTextBox txtPageNo;
         private Panel panel8;
         private Label label9;
         private Label label10;
@@ -754,7 +754,7 @@
         private Label label13;
         private Panel panel13;
         private RichTextBox txtName2nd;
-        private RichTextBox txtPage;
+        private RichTextBox txtCaseNo;
         private Label label3;
         private ComboBox cmbNature;
         private Label label2;

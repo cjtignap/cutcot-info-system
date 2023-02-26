@@ -8,15 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cutcot_info_system.child_forms
+namespace cutcot_info_system.pop_ups
 {
-    public partial class Dashboard : Form
+    public partial class ImageViewer : Form
     {
-        public Dashboard()
+        public ImageViewer(Image image)
         {
             InitializeComponent();
-
-            
+            this.TopMost = true;
+            pictureBox1.Height = image.Height;
+            pictureBox1.Width = image.Width;
+            pictureBox1.Image = image;
         }
     }
 }

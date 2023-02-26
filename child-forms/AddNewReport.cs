@@ -29,6 +29,11 @@ namespace cutcot_info_system.forms
             cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbStatus.SelectedIndex = 0;
             txtWarning.Visible = false;
+
+            ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
+            int lastReportNumber = reportInfoDAO.getLastID();
+            lastReportNumber++;
+            txtCaseNo.Text = lastReportNumber +"";
         }
 
 
@@ -69,7 +74,8 @@ namespace cutcot_info_system.forms
 
             try
             {
-                string currentPath = System.AppDomain.CurrentDomain.BaseDirectory;
+                String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+                String currentPath = path + "/Cutcot Info System/";
 
                 using (Stream saveFile = File.Create(currentPath + generatedFileName))
                 {
@@ -92,7 +98,7 @@ namespace cutcot_info_system.forms
         private void button2_Click_1(object sender, EventArgs e)
         {
             //basic validation
-            if (string.IsNullOrEmpty(txtCaseNo.Text) ||
+            if (string.IsNullOrEmpty(txtPageNo.Text) ||
                 string.IsNullOrEmpty(selectedImage) ||
                 string.IsNullOrEmpty(txtName1st.Text) ||
                 string.IsNullOrEmpty(txtAge1st.Text) ||
@@ -116,7 +122,7 @@ namespace cutcot_info_system.forms
                 {
                     string blotterType = cmbBlotterType.SelectedItem.ToString();
                     string natureOfDispute = cmbNature.SelectedItem.ToString();
-                    int pageNo = Int32.Parse(txtCaseNo.Text);
+                    int pageNo = Int32.Parse(txtPageNo.Text);
                     string selectedImage = this.selectedImage;
                     DateTime firstHearing = dateFirstHearing.Value.Date;
                     string reportStatus = cmbStatus.GetItemText(cmbStatus.SelectedIndex);

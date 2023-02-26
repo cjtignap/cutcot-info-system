@@ -154,6 +154,28 @@ namespace cutcot_info_system.models
             }
             mySqlConnection.Close();
         }
+
+        public int getLastID()
+        {
+            int lastId = 0;
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+                string sql = "SELECT LAST_INSERT_ID() from `reports`";
+
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                var result = cmd.ExecuteReader();
+                result.Read();
+                lastId = Convert.ToInt32(result[0]);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            mySqlConnection.Close();
+            return lastId;
+        }
     }
 
 

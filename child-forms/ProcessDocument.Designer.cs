@@ -35,6 +35,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -58,6 +59,7 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(313, 41);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(456, 590);
@@ -65,12 +67,13 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 271);
+            this.label1.BackColor = System.Drawing.Color.LightCoral;
+            this.label1.Location = new System.Drawing.Point(39, 313);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 15);
+            this.label1.Size = new System.Drawing.Size(397, 63);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Yo\' Mom 123";
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -95,6 +98,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(112, 82);
             this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(79, 172);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(339, 275);
+            this.label2.TabIndex = 4;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel4
             // 
@@ -131,7 +143,6 @@
             this.Name = "ProcessDocument";
             this.Text = "ProcessDocument";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,12 +151,13 @@
 
         private Button button1;
         private Panel panel1;
-        private Label label1;
         private Panel panel5;
         private Panel panel3;
         private Panel panel2;
         private Panel panel4;
         private PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Label label2;
+        private Label label1;
     }
 }

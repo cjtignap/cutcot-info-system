@@ -121,6 +121,15 @@ namespace cutcot_info_system.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;ConnectionString&gt;@&quot;server=localhost;userid=root;password=admin;database=cutcot-info-system&quot;&lt;/ConnectionString&gt;.
+        /// </summary>
+        internal static string database_info {
+            get {
+                return ResourceManager.GetString("database_info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap history {

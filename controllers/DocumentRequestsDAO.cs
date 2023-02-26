@@ -77,5 +77,27 @@ namespace cutcot_info_system.controllers
             }
             mySqlConnection.Close();
         }
+        public Boolean deleteRequest(string request_no)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+                mySqlConnection.Open();
+                string sql = "delete from `requests` where `id` = "+request_no+"";
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Request sucessfully removed.");
+
+                mySqlConnection.Close();
+                return true;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+
+                mySqlConnection.Close();
+                return false;
+            }
+        }
     }
 }

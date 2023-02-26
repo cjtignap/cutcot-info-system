@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +142,10 @@
             this.label2.TabIndex = 68;
             this.label2.Text = "Search Document Requests";
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // DocumentQueue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -171,5 +176,6 @@
         private Label label1;
         private Button button2;
         private Label label2;
+        private PrintDialog printDialog1;
     }
 }

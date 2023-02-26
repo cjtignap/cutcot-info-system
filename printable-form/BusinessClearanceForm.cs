@@ -22,7 +22,6 @@ namespace cutcot_info_system.printable_form
             lblDate.Text = businessClearance.date;
             lblBusinessName.Text = businessClearance.business;
             lblOwner.Text = businessClearance.name;
-
             switch (businessClearance.month)
             {
                 case "1":
@@ -67,5 +66,11 @@ namespace cutcot_info_system.printable_form
         {
 
         }
+
+        public void prepareToPrint()
+        {
+            pictureBox1.BringToFront();
+        }
+
     }
 }

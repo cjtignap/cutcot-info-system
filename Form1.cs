@@ -3,6 +3,8 @@ using cutcot_info_system.models;
 using cutcot_info_system.mysql_things;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
+using System.IO;
+
 namespace cutcot_info_system
 {
     public partial class Form1 : Form
@@ -11,6 +13,9 @@ namespace cutcot_info_system
         {
             InitializeComponent();
 
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            path = path + "/Cutcot Info System";
+            System.IO.Directory.CreateDirectory(path);
         }
 
      
@@ -29,6 +34,11 @@ namespace cutcot_info_system
             main.Show();
 
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

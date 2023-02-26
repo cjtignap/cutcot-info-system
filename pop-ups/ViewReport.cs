@@ -1,4 +1,5 @@
 ﻿using cutcot_info_system.models;
+using cutcot_info_system.pop_ups;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,16 @@ namespace cutcot_info_system.child_forms
 {
     public partial class ViewReport : Form
     {
+        Image reportImage;
         public ViewReport(ReportInfo reportInfo)
         {
             InitializeComponent();
             this.TopMost = true;
-            
+
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            String currentPath = path + "/Cutcot Info System";
+
+            reportImage = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
             txtBlotterType.Text = reportInfo.report_type;
             txtStatus.Text = "tbd";
             txtCase.Text = reportInfo.case_no;
@@ -33,8 +39,20 @@ namespace cutcot_info_system.child_forms
             txtAddress1st.Text = reportInfo.first_party_info.address;
             txtAddress2nd.Text = reportInfo.second_party_info.address;
 
-            string currentPath = System.AppDomain.CurrentDomain.BaseDirectory;
-            pictureBox.Image = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
+
+            pictureBox.Image = reportImage;
+
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            ImageViewer imageViewer = new ImageViewer(reportImage);
+            imageViewer.ShowDialog();
+            imageViewer.Dispose();
+        }
+
+        private void ViewReport_Load(object sender, EventArgs e)
+        {
 
         }
     }

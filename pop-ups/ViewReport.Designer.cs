@@ -549,6 +549,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox.Image = global::cutcot_info_system.Properties.Resources.undraw_Maintenance_re_59vn_removebg_preview;
             this.pictureBox.Location = new System.Drawing.Point(68, 281);
             this.pictureBox.Name = "pictureBox";
@@ -556,6 +557,7 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 66;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
             // ViewReport
             // 
@@ -581,6 +583,7 @@
             this.Controls.Add(this.panel8);
             this.Name = "ViewReport";
             this.Text = "ViewReport";
+            this.Load += new System.EventHandler(this.ViewReport_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);

@@ -63,5 +63,10 @@ namespace cutcot_info_system.printable_form
                     break;
             }
         }
+        public void prepareToPrint()
+        {
+            pictureBox1.BringToFront();
+        }
     }
+    
 }
