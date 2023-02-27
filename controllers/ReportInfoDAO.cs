@@ -1,4 +1,5 @@
-﻿using cutcot_info_system.mysql_things;
+﻿using cutcot_info_system.controllers;
+using cutcot_info_system.mysql_things;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,20 @@ namespace cutcot_info_system.models
 
             PartyInformation firstPartyInformation = reportInfo.first_party_info; 
             PartyInformation secondPartyInformation = reportInfo.second_party_info;
+
+
             int firstPartyId;
             int secondPartyId;
 
+            Hearing firstHearing = reportInfo.firstHearing;
+            Hearing secondHearing = reportInfo.secondHearing;
+            Hearing thirdHearing = reportInfo.thirdHearing;
+
+            int firstHearingId=0;
+            int secondHearingId=0;
+            int thirdHearingId=0;
+
+            //Linking Partyinformations with the report
             PartyInformationDAO partyInformationDAO= new PartyInformationDAO();
 
             partyInformationDAO.insert(firstPartyInformation);
@@ -28,12 +40,31 @@ namespace cutcot_info_system.models
             secondPartyId = partyInformationDAO.getLastID();
 
 
+            //Linking Hearing information with the report
+            HearingDAO hearingDAO = new HearingDAO();
+            if(!(firstHearing is null))
+            {
+                hearingDAO.insert(firstHearing);
+                firstHearingId = hearingDAO.getLastID();
+            }
+
+            if (!(secondHearing is null))
+            {
+                hearingDAO.insert(secondHearing);
+                secondHearingId = hearingDAO.getLastID();
+            }
+
+            if (!(thirdHearing is null))
+            {
+                hearingDAO.insert(thirdHearing);
+                thirdHearingId = hearingDAO.getLastID();
+            }
+
+
             string blotterType = reportInfo.report_type;
             string nature = reportInfo.nature_of_dispute;
             string recordPhoto  = reportInfo.record_photo;
             int page = reportInfo.page_no;
-            DateTime firstHearingDate = reportInfo.first_hearing;
-            DateOnly dateOnly = DateOnly.FromDateTime(firstHearingDate);
 
             DateTime dateNow = DateTime.Now.Date;
             DateOnly dateOnlyNow = DateOnly.FromDateTime(dateNow);
@@ -42,18 +73,8 @@ namespace cutcot_info_system.models
             MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
             try
             {
-                 sql = "INSERT INTO `reports` ( " +
-                    "`type`," +
-                    "`page`," +
-                    " `nature_of_dispute`," +
-                    " `record_photo`," +
-                    "`first_hearing_date`," +
-                    "`first_party_info`," +
-                    "`second_party_info`,`date`) values ('"+blotterType+
-                    "','"+page+
-                    "','" + nature +
-                    "','" +recordPhoto+
-                    "',STR_TO_DATE('"+dateOnly+ "','%d/%m/%Y')," + firstPartyId+","+secondPartyId+ ",STR_TO_DATE('" + DateTime.Now + "','%d/%m/%Y %h:%i:%s %p'))";
+                sql = "INSERT INTO `reports` ( `type`, `nature_of_dispute`, `record_photo`, `date`, `first_party_info`, `second_party_info`, `page`, `first_hearing`, `second_hearing`, `third_hearing`) VALUES ('"+blotterType+"','"+nature+"','"+recordPhoto+"',STR_TO_DATE('" + DateOnly.FromDateTime(DateTime.Now).ToString() + "','%d/%m/%Y'),'"+firstPartyId+"','"+secondPartyId+"','"+page+"','"+firstHearingId+"','"+secondHearingId+"','"+thirdHearingId+"')";
+                    
 
                 mySqlConnection.Open();
                 MySqlCommand cmd = new MySqlCommand(sql,mySqlConnection);
@@ -65,7 +86,7 @@ namespace cutcot_info_system.models
             catch(Exception e)
             {
                 
-                MessageBox.Show(e.Message);
+                MessageBox.Show("ERROR HERE : "+e.Message);
             }
             mySqlConnection.Close();
         }
@@ -122,7 +143,7 @@ namespace cutcot_info_system.models
                 ReportInfo reportInfo = new ReportInfo();
 
                 PartyInformationDAO partyInformationDAO = new PartyInformationDAO();
-
+                HearingDAO hearingDAO = new HearingDAO();
 
                 reader.Read();
                 reportInfo.case_no = reader.GetString("case_no");
@@ -130,19 +151,26 @@ namespace cutcot_info_system.models
                 reportInfo.nature_of_dispute = reader.GetString("nature_of_dispute");
                 reportInfo.record_photo = reader.GetString("record_photo");
                 reportInfo.report_type = reader.GetString("type");
-                reportInfo.first_hearing = reader.GetDateTime("first_hearing_date");
+
+
+                
                 reportInfo.page_no = reader.GetInt32("page");
 
                 string firstId = reader.GetString("first_party_info");
                 string secondId = reader.GetString("second_party_info");
 
+                string firstHearingId = reader.GetString("first_hearing");
+                string secondHearingId = reader.GetString("second_hearing");
+                string thirdHearingId = reader.GetString("third_hearing");
                 reader.Close();
 
                 mySqlConnection.Close();
                 reportInfo.first_party_info = partyInformationDAO.getPartyInformation(firstId);
 
                 reportInfo.second_party_info = partyInformationDAO.getPartyInformation(secondId);
-
+                reportInfo.firstHearing = hearingDAO.getHearingInformation(firstHearingId);
+                reportInfo.secondHearing = hearingDAO.getHearingInformation(secondHearingId);
+                reportInfo.thirdHearing = hearingDAO.getHearingInformation(thirdHearingId);
 
 
                 return reportInfo;

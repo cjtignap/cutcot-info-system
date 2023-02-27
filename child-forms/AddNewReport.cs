@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using cutcot_info_system.pop_ups;
 
 namespace cutcot_info_system.forms
 {
@@ -19,6 +20,11 @@ namespace cutcot_info_system.forms
         private String selectedImage;
         private String generatedFileName;
         Stream selectedImageStream;
+        private Hearing firstHearing;
+        private Hearing secondHearing;
+        private Hearing thirdHearing;
+        private String hearingText;
+
         public AddNewReport()
         {
             InitializeComponent();
@@ -29,11 +35,8 @@ namespace cutcot_info_system.forms
             cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbStatus.SelectedIndex = 0;
             txtWarning.Visible = false;
-
-            ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
-            int lastReportNumber = reportInfoDAO.getLastID();
-            lastReportNumber++;
-            txtCaseNo.Text = lastReportNumber +"";
+            hearingText = "No hearing";
+            lblHearings.Text = hearingText;
         }
 
 
@@ -75,7 +78,7 @@ namespace cutcot_info_system.forms
             try
             {
                 String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-                String currentPath = path + "/Cutcot Info System/";
+                String currentPath = path + "/Cutcot Info System/reports/";
 
                 using (Stream saveFile = File.Create(currentPath + generatedFileName))
                 {
@@ -124,7 +127,6 @@ namespace cutcot_info_system.forms
                     string natureOfDispute = cmbNature.SelectedItem.ToString();
                     int pageNo = Int32.Parse(txtPageNo.Text);
                     string selectedImage = this.selectedImage;
-                    DateTime firstHearing = dateFirstHearing.Value.Date;
                     string reportStatus = cmbStatus.GetItemText(cmbStatus.SelectedIndex);
 
                     string name1st = txtName1st.Text;
@@ -142,7 +144,7 @@ namespace cutcot_info_system.forms
 
 
                     generateFileName();
-                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName, firstHearing, firstPartyInformation, secondPartyInformation, DateTime.Now);
+                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName,firstHearing,secondHearing,thirdHearing, firstPartyInformation, secondPartyInformation, DateTime.Now);
                     ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
                     reportInfoDAO.insert(reportInfo);
                     saveImage();
@@ -153,6 +155,38 @@ namespace cutcot_info_system.forms
                     MessageBox.Show("Make sure to enter valid numbers");
                 }
 
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (AddHearing addHearing = new AddHearing())
+            {
+                var result = addHearing.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    Hearing hearing = addHearing.hearing;
+                    if(firstHearing is null)
+                    {
+                        firstHearing = hearing;
+
+                        hearingText = "First hearing : "+firstHearing.hearingSchedule.ToLongDateString();
+                        lblHearings.Text = hearingText; 
+                    }
+                    else if(secondHearing is null)
+                    {
+                        secondHearing = hearing;
+                        hearingText+="\nSecond hearing : "+ secondHearing.hearingSchedule.ToLongDateString();
+                        lblHearings.Text=hearingText;
+                    }
+                    else if(thirdHearing is null)
+                    {
+                        thirdHearing = hearing;
+                        hearingText += "\nThird hearing : " + thirdHearing.hearingSchedule.ToLongDateString();
+                        lblHearings.Text = hearingText;
+                        button3.Enabled = false;
+                    }
+                }
             }
         }
     }

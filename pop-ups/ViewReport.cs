@@ -15,13 +15,17 @@ namespace cutcot_info_system.child_forms
     public partial class ViewReport : Form
     {
         Image reportImage;
+
+        Hearing firstHearing;
+        Hearing secondHearing;
+        Hearing thirdHearing;
         public ViewReport(ReportInfo reportInfo)
         {
             InitializeComponent();
             this.TopMost = true;
 
             String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            String currentPath = path + "/Cutcot Info System";
+            String currentPath = path + "/Cutcot Info System/reports";
 
             reportImage = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
             txtBlotterType.Text = reportInfo.report_type;
@@ -37,11 +41,11 @@ namespace cutcot_info_system.child_forms
             txtAge1st.Text = reportInfo.first_party_info.age + "";
             txtAge2nd.Text = reportInfo.second_party_info.age + "";
             txtAddress1st.Text = reportInfo.first_party_info.address;
-            txtAddress2nd.Text = reportInfo.second_party_info.address;
-
-
+            txtAddress2nd.Text = reportInfo.second_party_info.address; 
             pictureBox.Image = reportImage;
-
+            firstHearing = reportInfo.firstHearing;
+            secondHearing = reportInfo.secondHearing;
+            thirdHearing = reportInfo.thirdHearing;
         }
 
         private void pictureBox_Click(object sender, EventArgs e)
@@ -53,7 +57,14 @@ namespace cutcot_info_system.child_forms
 
         private void ViewReport_Load(object sender, EventArgs e)
         {
+            
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ViewHearing viewHearing = new ViewHearing(firstHearing,secondHearing,thirdHearing);
+            viewHearing.ShowDialog();
         }
     }
 }

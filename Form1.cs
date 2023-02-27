@@ -14,7 +14,7 @@ namespace cutcot_info_system
             InitializeComponent();
 
             String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            path = path + "/Cutcot Info System";
+            path = path + "/Cutcot Info System/reports";
             System.IO.Directory.CreateDirectory(path);
         }
 

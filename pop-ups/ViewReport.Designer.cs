@@ -70,6 +70,7 @@
             this.txtDateSaved = new System.Windows.Forms.Label();
             this.txtStatus = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -559,12 +560,29 @@
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox_Click);
             // 
+            // button2
+            // 
+            this.button2.AutoSize = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(386, 246);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(182, 32);
+            this.button2.TabIndex = 67;
+            this.button2.Text = "View Hearing Schedule";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ViewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1256, 658);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtDateSaved);
@@ -581,6 +599,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ViewReport";
             this.Text = "ViewReport";
             this.Load += new System.EventHandler(this.ViewReport_Load);
@@ -646,5 +665,6 @@
         private Label txtDateSaved;
         private Label txtStatus;
         private PictureBox pictureBox;
+        private Button button2;
     }
 }
