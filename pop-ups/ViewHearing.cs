@@ -18,15 +18,19 @@ namespace cutcot_info_system.pop_ups
         private Hearing firstHearing;
         private Hearing secondHearing;
         private Hearing thirdHearing;
-        public ViewHearing(Hearing firstHearing, Hearing secondHearing, Hearing thirdHearing)
+
+        private int index = 0;
+        string report_id;
+        public ViewHearing(Hearing firstHearing, Hearing secondHearing, Hearing thirdHearing,string report_id)
         {
             InitializeComponent();
             this.TopMost = true;
             this.firstHearing = firstHearing;
             this.secondHearing = secondHearing;
             this.thirdHearing = thirdHearing;
+            this.report_id = report_id;
             hideLabels();
-            if(!Equals(firstHearing,"0")&& !Equals(secondHearing, "0")&& !Equals(thirdHearing, "0"))
+            if(firstHearing.Id !=  0&&secondHearing.Id !=0 && thirdHearing.Id !=0)
             {
                 button3.Enabled = false;
             }
@@ -36,30 +40,33 @@ namespace cutcot_info_system.pop_ups
         private void loadHearings()
         {
             HearingDAO hearingDAO = new HearingDAO();
-            if(!(firstHearing is null))
+            if(firstHearing.Id != 0)
             {
 
                 lbl1stRem.Visible = true;
                 lbl1stSched.Visible = true;
                 lbl1stRem.Text ="Remarks : "+ firstHearing.remarks;
                 lbl1stSched.Text = "1st : " + firstHearing.hearingSchedule.ToLongDateString();
+                index = 1;
             }
 
-            if(!(secondHearing is null))
+            if(secondHearing.Id != 0)
             {
                 lbl2ndRem.Visible = true;
                 lbl2ndSched.Visible = true;
                 lbl2ndRem.Text = "Remarks : "+secondHearing.remarks;
                 lbl2ndSched.Text = "2nd : "+secondHearing.hearingSchedule.ToLongDateString();
+                index = 2;
             }
 
-            if (!(thirdHearing is null))
+            if (thirdHearing.Id != 0)
             {
                 lbl3rdRem.Visible = true;
                 lbl3rdSched.Visible = true;
             
                 lbl3rdRem.Text = "Remarks : "+thirdHearing.remarks;
                 lbl3rdSched.Text ="3rd : "+ thirdHearing.hearingSchedule.ToLongDateString();
+                index = 3;
             }
 
         }
@@ -75,7 +82,32 @@ namespace cutcot_info_system.pop_ups
         }
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            using (AddHearing addHearing = new AddHearing())
+            {
+                var result = addHearing.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
+                    Hearing hearing = addHearing.hearing;
+                    if (firstHearing.Id == 0)
+                    {
+                        firstHearing = hearing;
+                        reportInfoDAO.linkHearingSchedule(report_id, "first_hearing", firstHearing.Id + "");
+                    }
+                    else if (secondHearing.Id == 0)
+                    {
+                        secondHearing = hearing;
+                        reportInfoDAO.linkHearingSchedule(report_id, "second_hearing", secondHearing.Id + "");
+                    }
+                    else if (thirdHearing.Id == 0)
+                    {
+                        thirdHearing = hearing;
+                        reportInfoDAO.linkHearingSchedule(report_id, "third_hearing", thirdHearing.Id + "");
+                        button3.Enabled = false;
+                    }
+                    loadHearings();
+                }
+            }
         }
     }
 }

@@ -24,6 +24,9 @@ namespace cutcot_info_system
         {
             InitializeComponent();
             pnlNavIcons.Visible = false;
+            Dashboard dashboard = new Dashboard();
+            OpenChildForm(dashboard, null, "Dashboard");
+            this.Focus();
         }
 
         

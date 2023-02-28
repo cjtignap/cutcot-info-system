@@ -15,7 +15,10 @@ namespace cutcot_info_system.models
             this.requestBy = requestBy;
             this.status = status;
         }
+        public DocumentRequest()
+        {
 
+        }
         public int id { get; set; }    
         public string docType { get; set; }
         public string requestBy { get; set; }

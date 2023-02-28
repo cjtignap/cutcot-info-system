@@ -1,4 +1,5 @@
-﻿using cutcot_info_system.models;
+﻿using cutcot_info_system.controllers;
+using cutcot_info_system.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace cutcot_info_system.pop_ups
         public AddHearing()
         {
             InitializeComponent();
+            this.TopMost = true;
         }
 
        
@@ -35,6 +37,9 @@ namespace cutcot_info_system.pop_ups
             hearing2.hearingSchedule = DateOnly.FromDateTime(dateHearing.Value.Date);
             this.hearing = hearing2;
             this.DialogResult = DialogResult.OK;
+            HearingDAO hearingDAO = new HearingDAO();
+            hearingDAO.insert(hearing);
+            hearing.Id = hearingDAO.getLastID();
             this.Close();
         }
     }

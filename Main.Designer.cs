@@ -77,9 +77,9 @@
             // 
             this.pnlParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.pnlParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlParent.Location = new System.Drawing.Point(239, 94);
+            this.pnlParent.Location = new System.Drawing.Point(233, 94);
             this.pnlParent.Name = "pnlParent";
-            this.pnlParent.Size = new System.Drawing.Size(1185, 677);
+            this.pnlParent.Size = new System.Drawing.Size(1191, 677);
             this.pnlParent.TabIndex = 12;
             // 
             // panel4
@@ -89,7 +89,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(214, 94);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(25, 677);
+            this.panel4.Size = new System.Drawing.Size(19, 677);
             this.panel4.TabIndex = 10;
             // 
             // btnCollapse
@@ -481,6 +481,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1424, 771);
             this.Controls.Add(this.pnlMain);
             this.HelpButton = true;

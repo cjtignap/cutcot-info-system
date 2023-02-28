@@ -77,6 +77,46 @@ namespace cutcot_info_system.controllers
             }
             mySqlConnection.Close();
         }
+        public DocumentRequest[] getFirstDocumentRequests()
+        {
+
+            DocumentRequest[] documentRequests = new DocumentRequest[30];
+
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+
+                int i = 0;
+                mySqlConnection.Open();
+                string sql = "SELECT * FROM `requests` WHERE `status` = 'unfulfilled' order by 'id' asc limit 30;";
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    DocumentRequest documentRequest = new DocumentRequest();
+                    documentRequest.id = reader.GetInt32("id");
+                    documentRequest.docType = reader.GetString("document_type");
+                    documentRequest.requestBy = reader.GetString("requested_by");
+                    documentRequests[i] = documentRequest;
+
+                    i++;
+
+                }
+
+                reader.Close();
+                mySqlConnection.Close();
+                return documentRequests;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+
+                mySqlConnection.Close();
+                return documentRequests;
+            }
+        }
         public Boolean deleteRequest(string request_no)
         {
             MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();

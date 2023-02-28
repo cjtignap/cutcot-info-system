@@ -1,4 +1,5 @@
-﻿using cutcot_info_system.models;
+﻿using cutcot_info_system.forms;
+using cutcot_info_system.models;
 using cutcot_info_system.mysql_things;
 using MySql.Data.MySqlClient;
 using System;
@@ -84,6 +85,46 @@ namespace cutcot_info_system.controllers
             {
                 MessageBox.Show("Something went wrong!");
                 return null;
+            }
+        }
+
+        public Hearing[] getHearingsSoon()
+        {
+
+            Hearing[] hearings = new Hearing[30];
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+
+                int i = 0;
+                mySqlConnection.Open();
+                string sql = "select * from `hearings` where `schedule` >= curdate() order by `schedule` asc limit 30;";
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    
+                    Hearing hearing = new Hearing();
+                    hearing.hearingSchedule = DateOnly.FromDateTime(reader.GetDateTime("schedule"));
+                    hearing.remarks = reader.GetString("remarks");
+                    hearing.Id = reader.GetInt32("id");
+                    hearings[i] = hearing;
+                    i++;
+
+                }
+
+                reader.Close();
+                mySqlConnection.Close();
+                return hearings;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+
+                mySqlConnection.Close();
+                return hearings;
             }
         }
 

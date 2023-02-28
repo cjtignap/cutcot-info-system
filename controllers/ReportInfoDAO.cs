@@ -15,7 +15,7 @@ namespace cutcot_info_system.models
         {
 
 
-            PartyInformation firstPartyInformation = reportInfo.first_party_info; 
+            PartyInformation firstPartyInformation = reportInfo.first_party_info;
             PartyInformation secondPartyInformation = reportInfo.second_party_info;
 
 
@@ -26,12 +26,12 @@ namespace cutcot_info_system.models
             Hearing secondHearing = reportInfo.secondHearing;
             Hearing thirdHearing = reportInfo.thirdHearing;
 
-            int firstHearingId=0;
-            int secondHearingId=0;
-            int thirdHearingId=0;
+            int firstHearingId = 0;
+            int secondHearingId = 0;
+            int thirdHearingId = 0;
 
             //Linking Partyinformations with the report
-            PartyInformationDAO partyInformationDAO= new PartyInformationDAO();
+            PartyInformationDAO partyInformationDAO = new PartyInformationDAO();
 
             partyInformationDAO.insert(firstPartyInformation);
             firstPartyId = partyInformationDAO.getLastID();
@@ -42,51 +42,49 @@ namespace cutcot_info_system.models
 
             //Linking Hearing information with the report
             HearingDAO hearingDAO = new HearingDAO();
-            if(!(firstHearing is null))
+            if (!(firstHearing is null))
             {
-                hearingDAO.insert(firstHearing);
-                firstHearingId = hearingDAO.getLastID();
+
+                firstHearingId = firstHearing.Id;
             }
 
             if (!(secondHearing is null))
             {
-                hearingDAO.insert(secondHearing);
-                secondHearingId = hearingDAO.getLastID();
+                secondHearingId = secondHearing.Id;
             }
 
             if (!(thirdHearing is null))
             {
-                hearingDAO.insert(thirdHearing);
-                thirdHearingId = hearingDAO.getLastID();
+                thirdHearingId = thirdHearing.Id;
             }
 
 
             string blotterType = reportInfo.report_type;
             string nature = reportInfo.nature_of_dispute;
-            string recordPhoto  = reportInfo.record_photo;
+            string recordPhoto = reportInfo.record_photo;
             int page = reportInfo.page_no;
 
             DateTime dateNow = DateTime.Now.Date;
             DateOnly dateOnlyNow = DateOnly.FromDateTime(dateNow);
-            string sql="";
+            string sql = "";
 
             MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
             try
             {
-                sql = "INSERT INTO `reports` ( `type`, `nature_of_dispute`, `record_photo`, `date`, `first_party_info`, `second_party_info`, `page`, `first_hearing`, `second_hearing`, `third_hearing`) VALUES ('"+blotterType+"','"+nature+"','"+recordPhoto+"',STR_TO_DATE('" + DateOnly.FromDateTime(DateTime.Now).ToString() + "','%d/%m/%Y'),'"+firstPartyId+"','"+secondPartyId+"','"+page+"','"+firstHearingId+"','"+secondHearingId+"','"+thirdHearingId+"')";
-                    
+                sql = "INSERT INTO `reports` ( `type`, `nature_of_dispute`, `record_photo`, `date`, `first_party_info`, `second_party_info`, `page`, `first_hearing`, `second_hearing`, `third_hearing`) VALUES ('" + blotterType + "','" + nature + "','" + recordPhoto + "',STR_TO_DATE('" + DateOnly.FromDateTime(DateTime.Now).ToString() + "','%d/%m/%Y'),'" + firstPartyId + "','" + secondPartyId + "','" + page + "','" + firstHearingId + "','" + secondHearingId + "','" + thirdHearingId + "')";
+
 
                 mySqlConnection.Open();
-                MySqlCommand cmd = new MySqlCommand(sql,mySqlConnection);
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Succesfully inserted new record");
 
                 mySqlConnection.Close();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                
-                MessageBox.Show("ERROR HERE : "+e.Message);
+
+                MessageBox.Show("ERROR HERE : " + e.Message);
             }
             mySqlConnection.Close();
         }
@@ -99,10 +97,10 @@ namespace cutcot_info_system.models
                 mySqlConnection.Open();
                 string sql = "Select * from `reports`";
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
-                MySqlDataReader reader = cmd.ExecuteReader();   
+                MySqlDataReader reader = cmd.ExecuteReader();
                 return reader;
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
                 return null;
@@ -110,7 +108,7 @@ namespace cutcot_info_system.models
             mySqlConnection.Close();
         }
 
-       
+
 
         public MySqlDataReader getReportsByName(string name)
         {
@@ -118,7 +116,7 @@ namespace cutcot_info_system.models
             try
             {
                 mySqlConnection.Open();
-                string sql = "SELECT * from `reports` where (`reports`.`first_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%"+name+"%')) or (`reports`.`second_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%"+name+"%'));";
+                string sql = "SELECT * from `reports` where (`reports`.`first_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + name + "%')) or (`reports`.`second_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + name + "%'));";
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 return reader;
@@ -153,7 +151,7 @@ namespace cutcot_info_system.models
                 reportInfo.report_type = reader.GetString("type");
 
 
-                
+
                 reportInfo.page_no = reader.GetInt32("page");
 
                 string firstId = reader.GetString("first_party_info");
@@ -204,7 +202,25 @@ namespace cutcot_info_system.models
             mySqlConnection.Close();
             return lastId;
         }
+        public void linkHearingSchedule(string report_id, string hearing_no, string hearing_id)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+
+            try
+            {
+                string sql = "UPDATE `reports` SET `"+hearing_no+"` = '"+hearing_id+"' WHERE `reports`.`case_no` = "+report_id+"";
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+
+                mySqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR HERE : " + e.Message);
+            }
+            mySqlConnection.Close();
+        }
+
     }
-
-
 }

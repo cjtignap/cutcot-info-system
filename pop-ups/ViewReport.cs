@@ -19,6 +19,7 @@ namespace cutcot_info_system.child_forms
         Hearing firstHearing;
         Hearing secondHearing;
         Hearing thirdHearing;
+        string report_id;
         public ViewReport(ReportInfo reportInfo)
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace cutcot_info_system.child_forms
 
             String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
             String currentPath = path + "/Cutcot Info System/reports";
-
+            report_id = reportInfo.case_no;
             reportImage = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
             txtBlotterType.Text = reportInfo.report_type;
             txtStatus.Text = "tbd";
@@ -63,7 +64,7 @@ namespace cutcot_info_system.child_forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ViewHearing viewHearing = new ViewHearing(firstHearing,secondHearing,thirdHearing);
+            ViewHearing viewHearing = new ViewHearing(firstHearing,secondHearing,thirdHearing,report_id);
             viewHearing.ShowDialog();
         }
     }
