@@ -22,7 +22,7 @@ namespace cutcot_info_system
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.G && e.Modifiers == Keys.Control )
+            if (e.KeyCode == Keys.OemSemicolon && e.Modifiers == Keys.Control )
             {
                     MessageBox.Show("TO BE EDITED SOON");
             }

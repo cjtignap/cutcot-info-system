@@ -71,6 +71,7 @@
             this.txtStatus = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -140,6 +141,7 @@
             this.txtPhone1st.Location = new System.Drawing.Point(10, 5);
             this.txtPhone1st.Multiline = false;
             this.txtPhone1st.Name = "txtPhone1st";
+            this.txtPhone1st.ReadOnly = true;
             this.txtPhone1st.RightMargin = 10;
             this.txtPhone1st.Size = new System.Drawing.Size(326, 20);
             this.txtPhone1st.TabIndex = 1;
@@ -175,6 +177,7 @@
             this.txtAge1st.Location = new System.Drawing.Point(10, 5);
             this.txtAge1st.Multiline = false;
             this.txtAge1st.Name = "txtAge1st";
+            this.txtAge1st.ReadOnly = true;
             this.txtAge1st.RightMargin = 10;
             this.txtAge1st.Size = new System.Drawing.Size(112, 20);
             this.txtAge1st.TabIndex = 1;
@@ -200,6 +203,7 @@
             this.txtAddress1st.Location = new System.Drawing.Point(10, 5);
             this.txtAddress1st.Multiline = false;
             this.txtAddress1st.Name = "txtAddress1st";
+            this.txtAddress1st.ReadOnly = true;
             this.txtAddress1st.RightMargin = 10;
             this.txtAddress1st.Size = new System.Drawing.Size(338, 20);
             this.txtAddress1st.TabIndex = 1;
@@ -245,6 +249,7 @@
             this.txtName1st.Location = new System.Drawing.Point(10, 5);
             this.txtName1st.Multiline = false;
             this.txtName1st.Name = "txtName1st";
+            this.txtName1st.ReadOnly = true;
             this.txtName1st.RightMargin = 10;
             this.txtName1st.Size = new System.Drawing.Size(353, 20);
             this.txtName1st.TabIndex = 1;
@@ -307,6 +312,7 @@
             this.txtPhone2nd.Location = new System.Drawing.Point(10, 5);
             this.txtPhone2nd.Multiline = false;
             this.txtPhone2nd.Name = "txtPhone2nd";
+            this.txtPhone2nd.ReadOnly = true;
             this.txtPhone2nd.RightMargin = 10;
             this.txtPhone2nd.Size = new System.Drawing.Size(326, 20);
             this.txtPhone2nd.TabIndex = 1;
@@ -342,6 +348,7 @@
             this.txtAge2nd.Location = new System.Drawing.Point(10, 5);
             this.txtAge2nd.Multiline = false;
             this.txtAge2nd.Name = "txtAge2nd";
+            this.txtAge2nd.ReadOnly = true;
             this.txtAge2nd.RightMargin = 10;
             this.txtAge2nd.Size = new System.Drawing.Size(112, 20);
             this.txtAge2nd.TabIndex = 1;
@@ -367,6 +374,7 @@
             this.txtAddress2nd.Location = new System.Drawing.Point(10, 5);
             this.txtAddress2nd.Multiline = false;
             this.txtAddress2nd.Name = "txtAddress2nd";
+            this.txtAddress2nd.ReadOnly = true;
             this.txtAddress2nd.RightMargin = 10;
             this.txtAddress2nd.Size = new System.Drawing.Size(338, 20);
             this.txtAddress2nd.TabIndex = 1;
@@ -412,6 +420,7 @@
             this.txtName2nd.Location = new System.Drawing.Point(10, 5);
             this.txtName2nd.Multiline = false;
             this.txtName2nd.Name = "txtName2nd";
+            this.txtName2nd.ReadOnly = true;
             this.txtName2nd.RightMargin = 10;
             this.txtName2nd.Size = new System.Drawing.Size(353, 20);
             this.txtName2nd.TabIndex = 1;
@@ -568,13 +577,29 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(386, 246);
+            this.button2.Location = new System.Drawing.Point(264, 246);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 32);
+            this.button2.Size = new System.Drawing.Size(175, 32);
             this.button2.TabIndex = 67;
             this.button2.Text = "View Hearing Schedule";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(448, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 32);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Change Status";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ViewReport
             // 
@@ -582,6 +607,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1256, 658);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.txtStatus);
@@ -666,5 +692,6 @@
         private Label txtStatus;
         private PictureBox pictureBox;
         private Button button2;
+        private Button button1;
     }
 }

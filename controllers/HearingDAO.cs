@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace cutcot_info_system.controllers
 {
@@ -127,7 +128,27 @@ namespace cutcot_info_system.controllers
                 return hearings;
             }
         }
+        public void updateHearing(Hearing hearing)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
 
+            try
+            {
+
+                String convertedDate = hearing.hearingSchedule.ToString();
+                string sql = "UPDATE `hearings` SET `schedule` = STR_TO_DATE('"+ convertedDate + "','%d/%m/%Y'), `remarks` = '" + hearing.remarks+"' WHERE `id` = "+hearing.Id;
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+
+                mySqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR HERE : " + e.Message);
+            }
+            mySqlConnection.Close();
+        }
 
     }
 }

@@ -14,11 +14,12 @@ namespace cutcot_info_system.child_forms
 {
     public partial class Dashboard : Form
     {
+        Hearing[] hearings;
         public Dashboard()
         {
             InitializeComponent();
             HearingDAO hearingDAO = new HearingDAO();
-            Hearing[] hearings = hearingDAO.getHearingsSoon();
+            hearings = hearingDAO.getHearingsSoon();
             int i = 0;
             while (!(hearings[i] is null)&& i<30)
             {
@@ -45,6 +46,17 @@ namespace cutcot_info_system.child_forms
 
         private void panel11_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void listHearings_MouseDown(object sender, MouseEventArgs e)
+        {
+            int i = listHearings.SelectedIndex;
+            ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
+
+             ReportInfo report = reportInfoDAO.getReportViaHearing(hearings[i].Id + "");
+            ViewReport viewReport = new ViewReport(report);
+            viewReport.ShowDialog();
+
         }
     }
    

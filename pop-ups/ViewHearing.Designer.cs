@@ -36,6 +36,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lbl3rdRem = new System.Windows.Forms.Label();
             this.lbl3rdSched = new System.Windows.Forms.Label();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -117,12 +120,54 @@
             this.lbl3rdSched.TabIndex = 69;
             this.lbl3rdSched.Text = "Remarks";
             // 
+            // btn1
+            // 
+            this.btn1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.ForeColor = System.Drawing.Color.White;
+            this.btn1.Location = new System.Drawing.Point(396, 65);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(50, 25);
+            this.btn1.TabIndex = 71;
+            this.btn1.Text = "edit";
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
+            // btn2
+            // 
+            this.btn2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2.ForeColor = System.Drawing.Color.White;
+            this.btn2.Location = new System.Drawing.Point(396, 194);
+            this.btn2.Name = "btn2";
+            this.btn2.Size = new System.Drawing.Size(50, 25);
+            this.btn2.TabIndex = 72;
+            this.btn2.Text = "edit";
+            this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            // 
+            // btn3
+            // 
+            this.btn3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn3.ForeColor = System.Drawing.Color.White;
+            this.btn3.Location = new System.Drawing.Point(396, 303);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(50, 25);
+            this.btn3.TabIndex = 73;
+            this.btn3.Text = "edit";
+            this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            // 
             // ViewHearing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(778, 432);
+            this.Controls.Add(this.btn3);
+            this.Controls.Add(this.btn2);
+            this.Controls.Add(this.btn1);
             this.Controls.Add(this.lbl3rdRem);
             this.Controls.Add(this.lbl3rdSched);
             this.Controls.Add(this.button3);
@@ -148,5 +193,8 @@
         private Button button3;
         private Label lbl3rdRem;
         private Label lbl3rdSched;
+        private Button btn1;
+        private Button btn2;
+        private Button btn3;
     }
 }

@@ -63,6 +63,7 @@ namespace cutcot_info_system.models
             string nature = reportInfo.nature_of_dispute;
             string recordPhoto = reportInfo.record_photo;
             int page = reportInfo.page_no;
+            string status = reportInfo.status;
 
             DateTime dateNow = DateTime.Now.Date;
             DateOnly dateOnlyNow = DateOnly.FromDateTime(dateNow);
@@ -71,7 +72,7 @@ namespace cutcot_info_system.models
             MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
             try
             {
-                sql = "INSERT INTO `reports` ( `type`, `nature_of_dispute`, `record_photo`, `date`, `first_party_info`, `second_party_info`, `page`, `first_hearing`, `second_hearing`, `third_hearing`) VALUES ('" + blotterType + "','" + nature + "','" + recordPhoto + "',STR_TO_DATE('" + DateOnly.FromDateTime(DateTime.Now).ToString() + "','%d/%m/%Y'),'" + firstPartyId + "','" + secondPartyId + "','" + page + "','" + firstHearingId + "','" + secondHearingId + "','" + thirdHearingId + "')";
+                sql = "INSERT INTO `reports` ( `type`, `nature_of_dispute`, `record_photo`, `date`, `first_party_info`, `second_party_info`, `page`, `first_hearing`, `second_hearing`, `third_hearing`,`status`) VALUES ('" + blotterType + "','" + nature + "','" + recordPhoto + "',STR_TO_DATE('" + DateOnly.FromDateTime(DateTime.Now).ToString() + "','%d/%m/%Y'),'" + firstPartyId + "','" + secondPartyId + "','" + page + "','" + firstHearingId + "','" + secondHearingId + "','" + thirdHearingId + "','"+status+"')";
 
 
                 mySqlConnection.Open();
@@ -149,7 +150,7 @@ namespace cutcot_info_system.models
                 reportInfo.nature_of_dispute = reader.GetString("nature_of_dispute");
                 reportInfo.record_photo = reader.GetString("record_photo");
                 reportInfo.report_type = reader.GetString("type");
-
+                reportInfo.status = reader.GetString("status");
 
 
                 reportInfo.page_no = reader.GetInt32("page");
@@ -209,6 +210,84 @@ namespace cutcot_info_system.models
             try
             {
                 string sql = "UPDATE `reports` SET `"+hearing_no+"` = '"+hearing_id+"' WHERE `reports`.`case_no` = "+report_id+"";
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+
+                mySqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR HERE : " + e.Message);
+            }
+            mySqlConnection.Close();
+        }
+
+        public ReportInfo getReportViaHearing(string hearingNo)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+                mySqlConnection.Open();
+                string sql = "select * from `reports` where `first_hearing`  = '"+hearingNo+"'" +
+                    " or `second_hearing`  = '"+hearingNo+"' or `third_hearing`  = '"+ hearingNo + "';";
+                
+               
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                ReportInfo reportInfo = new ReportInfo();
+
+                PartyInformationDAO partyInformationDAO = new PartyInformationDAO();
+                HearingDAO hearingDAO = new HearingDAO();
+
+                reader.Read();
+               
+                reportInfo.case_no = reader.GetString("case_no");
+                reportInfo.date = reader.GetDateTime("date");
+                reportInfo.nature_of_dispute = reader.GetString("nature_of_dispute");
+                reportInfo.record_photo = reader.GetString("record_photo");
+                reportInfo.report_type = reader.GetString("type");
+                reportInfo.status = reader.GetString("status");
+
+
+                reportInfo.page_no = reader.GetInt32("page");
+
+                string firstId = reader.GetString("first_party_info");
+                string secondId = reader.GetString("second_party_info");
+
+                string firstHearingId = reader.GetString("first_hearing");
+                string secondHearingId = reader.GetString("second_hearing");
+                string thirdHearingId = reader.GetString("third_hearing");
+                reader.Close();
+
+                mySqlConnection.Close();
+                reportInfo.first_party_info = partyInformationDAO.getPartyInformation(firstId);
+
+                reportInfo.second_party_info = partyInformationDAO.getPartyInformation(secondId);
+                reportInfo.firstHearing = hearingDAO.getHearingInformation(firstHearingId);
+                reportInfo.secondHearing = hearingDAO.getHearingInformation(secondHearingId);
+                reportInfo.thirdHearing = hearingDAO.getHearingInformation(thirdHearingId);
+
+
+                mySqlConnection.Close();
+                return reportInfo;
+            }
+            catch (Exception exc)
+            {
+
+                mySqlConnection.Close();
+                MessageBox.Show(exc.Message);
+                return null;
+            }
+        }
+
+        public void updateStatus(string case_no,string status)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+
+            try
+            {
+                string sql = "update `reports` set `status` = '"+status+"' where `case_no` = '"+case_no+"';";
                 mySqlConnection.Open();
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 cmd.ExecuteNonQuery();

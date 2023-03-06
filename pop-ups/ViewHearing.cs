@@ -45,6 +45,7 @@ namespace cutcot_info_system.pop_ups
 
                 lbl1stRem.Visible = true;
                 lbl1stSched.Visible = true;
+                btn1.Visible = true;
                 lbl1stRem.Text ="Remarks : "+ firstHearing.remarks;
                 lbl1stSched.Text = "1st : " + firstHearing.hearingSchedule.ToLongDateString();
                 index = 1;
@@ -54,6 +55,7 @@ namespace cutcot_info_system.pop_ups
             {
                 lbl2ndRem.Visible = true;
                 lbl2ndSched.Visible = true;
+                btn2.Visible = true;
                 lbl2ndRem.Text = "Remarks : "+secondHearing.remarks;
                 lbl2ndSched.Text = "2nd : "+secondHearing.hearingSchedule.ToLongDateString();
                 index = 2;
@@ -63,7 +65,7 @@ namespace cutcot_info_system.pop_ups
             {
                 lbl3rdRem.Visible = true;
                 lbl3rdSched.Visible = true;
-            
+                btn3.Visible = true;
                 lbl3rdRem.Text = "Remarks : "+thirdHearing.remarks;
                 lbl3rdSched.Text ="3rd : "+ thirdHearing.hearingSchedule.ToLongDateString();
                 index = 3;
@@ -79,6 +81,9 @@ namespace cutcot_info_system.pop_ups
             lbl2ndSched.Visible = false;
             lbl3rdRem.Visible = false;
             lbl3rdSched.Visible = false;
+            btn1.Visible = false;
+            btn2.Visible = false;
+            btn3.Visible = false;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -106,6 +111,46 @@ namespace cutcot_info_system.pop_ups
                         button3.Enabled = false;
                     }
                     loadHearings();
+                }
+            }
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            
+            using (EditHearing editHearing = new EditHearing(firstHearing))
+            {
+                var result = editHearing.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    lbl1stSched.Text ="1st : "+ editHearing.hearing.hearingSchedule.ToLongDateString();
+                    lbl1stRem.Text = editHearing.hearing.remarks;
+                }
+            }
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            using (EditHearing editHearing = new EditHearing(secondHearing))
+            {
+                var result = editHearing.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    lbl2ndSched.Text = "2nd : "+editHearing.hearing.hearingSchedule.ToLongDateString();
+                    lbl2ndRem.Text = editHearing.hearing.remarks;
+                }
+            }
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            using (EditHearing editHearing = new EditHearing(thirdHearing))
+            {
+                var result = editHearing.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    lbl3rdSched.Text = "3rd : "+editHearing.hearing.hearingSchedule.ToLongDateString();
+                    lbl3rdRem.Text = editHearing.hearing.remarks;
                 }
             }
         }

@@ -30,7 +30,7 @@ namespace cutcot_info_system.child_forms
             report_id = reportInfo.case_no;
             reportImage = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
             txtBlotterType.Text = reportInfo.report_type;
-            txtStatus.Text = "tbd";
+            txtStatus.Text = reportInfo.status;
             txtCase.Text = reportInfo.case_no;
             txtPage.Text = reportInfo.page_no+"";
             txtDateSaved.Text = reportInfo.date + "";
@@ -66,6 +66,19 @@ namespace cutcot_info_system.child_forms
         {
             ViewHearing viewHearing = new ViewHearing(firstHearing,secondHearing,thirdHearing,report_id);
             viewHearing.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          
+            using (ChangeStatus changeStatus = new ChangeStatus(report_id))
+            {
+                var result = changeStatus.ShowDialog();
+                if(result == DialogResult.OK)
+                {
+                    txtStatus.Text = changeStatus.status;
+                }
+            }
         }
     }
 }

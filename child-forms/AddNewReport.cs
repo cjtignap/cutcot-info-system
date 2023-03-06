@@ -127,7 +127,7 @@ namespace cutcot_info_system.forms
                     string natureOfDispute = cmbNature.SelectedItem.ToString();
                     int pageNo = Int32.Parse(txtPageNo.Text);
                     string selectedImage = this.selectedImage;
-                    string reportStatus = cmbStatus.GetItemText(cmbStatus.SelectedIndex);
+                    string reportStatus = cmbStatus.SelectedItem.ToString();
 
                     string name1st = txtName1st.Text;
                     int age1st = Int32.Parse(txtAge1st.Text);
@@ -144,7 +144,7 @@ namespace cutcot_info_system.forms
 
 
                     generateFileName();
-                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName,firstHearing,secondHearing,thirdHearing, firstPartyInformation, secondPartyInformation, DateTime.Now);
+                    reportInfo = new ReportInfo(blotterType, natureOfDispute, pageNo, "0", generatedFileName,firstHearing,secondHearing,thirdHearing, firstPartyInformation, secondPartyInformation, DateTime.Now, reportStatus);
                     ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
                     reportInfoDAO.insert(reportInfo);
                     saveImage();

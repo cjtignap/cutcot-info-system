@@ -22,7 +22,7 @@ namespace cutcot_info_system.models
         public PartyInformation second_party_info { get; set; }
         public DateTime date { get; set; }
 
-       
+        public string status { get; set; }
 
         public ReportInfo() { }
 
@@ -35,7 +35,8 @@ namespace cutcot_info_system.models
             Hearing thirdHearing,
             PartyInformation first_party_info,
             PartyInformation second_party_info, 
-            DateTime date)
+            DateTime date,
+            string status)
         {
             this.report_type = report_type;
             this.nature_of_dispute = nature_of_dispute;
@@ -48,6 +49,8 @@ namespace cutcot_info_system.models
             this.first_party_info = first_party_info;
             this.second_party_info = second_party_info;
             this.date = date;
+            this.status = status;
+
         }
     }
 
