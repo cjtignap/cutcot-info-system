@@ -1,5 +1,6 @@
 ﻿using cutcot_info_system.controllers;
 using cutcot_info_system.models;
+using cutcot_info_system.printable_form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,9 @@ namespace cutcot_info_system.child_forms
     public partial class Dashboard : Form
     {
         Hearing[] hearings;
+        DocumentRequest[] documentRequests;
+        int selectedHearingIndex = -1;
+        int selectedDocumentIndex = -1;
         public Dashboard()
         {
             InitializeComponent();
@@ -32,7 +36,7 @@ namespace cutcot_info_system.child_forms
             i = 0;
 
             DocumentRequestsDAO documentRequestsDAO = new DocumentRequestsDAO();
-            DocumentRequest[] documentRequests = documentRequestsDAO.getFirstDocumentRequests();
+            documentRequests = documentRequestsDAO.getFirstDocumentRequests();
 
             while (!(documentRequests[i] is null) && i < 30)
             {
@@ -44,18 +48,71 @@ namespace cutcot_info_system.child_forms
             }
         }
 
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-        }
 
         private void listHearings_MouseDown(object sender, MouseEventArgs e)
         {
             int i = listHearings.SelectedIndex;
-            ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
+            if(i != selectedHearingIndex)
+            {
+                ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
 
-             ReportInfo report = reportInfoDAO.getReportViaHearing(hearings[i].Id + "");
-            ViewReport viewReport = new ViewReport(report);
-            viewReport.ShowDialog();
+                ReportInfo report = reportInfoDAO.getReportViaHearing(hearings[i].Id + "");
+                ViewReport viewReport = new ViewReport(report);
+                viewReport.ShowDialog();
+
+                selectedHearingIndex = i;
+            }
+            
+
+        }
+
+        private void listRequests_MouseClick(object sender, MouseEventArgs e)
+        {
+            int i = listRequests.SelectedIndex;
+
+            if (i != selectedDocumentIndex)
+            {
+
+
+                DocumentRequest documentRequest = documentRequests[i];
+
+                if(documentRequest.docType == "BUSINESS_CLEARANCE")
+                {
+                    BusinessClearanceDAO businessClearanceDAO = new BusinessClearanceDAO();
+                    BusinessClearance businessClearance = businessClearanceDAO.getBusinessClearance(documentRequest.id + "");
+                    BusinessClearanceForm businessClearanceForm = new BusinessClearanceForm(businessClearance);
+
+                    businessClearanceForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+                    businessClearanceForm.ShowDialog();
+                    businessClearanceForm.Dispose();
+                }
+                else if(documentRequest.docType == "WATER_CLEARANCE")
+                {
+                    WaterClearanceDAO waterClearanceDAO = new WaterClearanceDAO();
+                    WaterClearance waterClearance = waterClearanceDAO.getWaterClearance(documentRequest.id + "");
+                    WaterClearanceForm waterClearanceForm = new WaterClearanceForm(waterClearance);
+                    waterClearanceForm.ControlBox = true;
+                    waterClearanceForm.FormBorderStyle =  FormBorderStyle.FixedDialog;
+                    waterClearanceForm.ShowDialog();
+                    waterClearanceForm.Dispose();
+                }
+                else if (documentRequest.docType == "WIRING_CLEARANCE")
+                {
+                    WiringClearanceDAO wiringClearanceDAO = new WiringClearanceDAO();
+                    WiringClearance wiringClearance = wiringClearanceDAO.GetWiringClearance(documentRequest.id + "");
+                    WiringClearanceForm wiringClearanceForm = new WiringClearanceForm(wiringClearance);
+                    wiringClearanceForm.ControlBox = true;
+                    wiringClearanceForm.FormBorderStyle = FormBorderStyle.FixedDialog;  
+                    wiringClearanceForm.ShowDialog();
+                    wiringClearanceForm.Dispose();
+                }
+                selectedDocumentIndex = i;
+            }
+
+        }
+
+        private void listHearings_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

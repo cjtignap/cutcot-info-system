@@ -111,13 +111,36 @@ namespace cutcot_info_system.models
 
 
 
-        public MySqlDataReader getReportsByName(string name)
+        public MySqlDataReader getReports(string query,string type)
         {
             MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
             try
             {
                 mySqlConnection.Open();
-                string sql = "SELECT * from `reports` where (`reports`.`first_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + name + "%')) or (`reports`.`second_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + name + "%'));";
+
+
+                string sql = "SELECT * from `reports` where (`reports`.`first_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + query + "%')) or (`reports`.`second_party_info` in (select `party_information`.`party_info_id` from `party_information` where `party_information`.`name` like '%" + query + "%'));";
+
+                if (type == "case_no")
+                {
+                    sql = "SELECT * FROM `reports` WHERE `case_no` = '"+query+"';";
+                }
+                else if (type == "page")
+                {
+                    sql = "SELECT * FROM `reports` WHERE `page` = '" + query + "';";
+                }
+                else if (type == "status")
+                {
+                    sql = "SELECT * FROM `reports` WHERE `status` like '%"+ query + "%';";
+                }
+                else if (type == "nature")
+                {
+                    sql = "SELECT * FROM `reports` WHERE `nature_of_dispute` like '%" + query + "%';";
+                }
+                else if(type == "type")
+                {
+                    sql = "SELECT * FROM `reports` WHERE `type` like '%" + query + "%';";
+                }
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 return reader;

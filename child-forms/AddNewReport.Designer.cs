@@ -498,7 +498,7 @@
             "Financial Obligation",
             "VAW",
             "VAC",
-            "Slight Phyical Injury?",
+            "Slight Phyical Injury",
             "Verbal Abuse",
             "Theft",
             "Misunderstanding",

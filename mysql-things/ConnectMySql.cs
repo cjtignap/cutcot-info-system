@@ -19,11 +19,12 @@ namespace cutcot_info_system.mysql_things
         {
             if (mySqlConnection == null)
             {
-                XDocument xml = XDocument.Parse(Resources.database_info);
-                string cs = (string)xml.Element("ConnectionString");
+                // XDocument xml = XDocument.Parse(Resources.database_info);
+                // string cs = (string)xml.Element("ConnectionString");
 
 
                 //string cs = @"server=localhost;userid=root;password=admin;database=cutcot-info-system";
+                string cs = @"server=192.168.1.2;userid=dbadmin;password=password;database=cutcot-info-system";
                 mySqlConnection = new MySqlConnection(cs);
             }
             return mySqlConnection;

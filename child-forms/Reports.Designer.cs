@@ -53,7 +53,6 @@
             this.panel7.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel7.Size = new System.Drawing.Size(429, 51);
             this.panel7.TabIndex = 44;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // panel2
             // 
@@ -107,17 +106,17 @@
             this.cmbNature.FormattingEnabled = true;
             this.cmbNature.ItemHeight = 22;
             this.cmbNature.Items.AddRange(new object[] {
+            "name",
             "case no",
-            "upload date",
-            "page",
+            "status",
             "type",
-            "nature"});
+            "nature",
+            "page"});
             this.cmbNature.Location = new System.Drawing.Point(396, 125);
             this.cmbNature.Name = "cmbNature";
             this.cmbNature.Size = new System.Drawing.Size(111, 30);
             this.cmbNature.TabIndex = 47;
             this.cmbNature.Text = "--Search by--";
-            this.cmbNature.SelectedIndexChanged += new System.EventHandler(this.cmbNature_SelectedIndexChanged);
             // 
             // pnlResults
             // 
@@ -178,7 +177,6 @@
             this.Controls.Add(this.panel7);
             this.Name = "Reports";
             this.Text = "Reports";
-            this.Load += new System.EventHandler(this.Reports_Load);
             this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

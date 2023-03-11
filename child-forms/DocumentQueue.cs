@@ -23,18 +23,27 @@ namespace cutcot_info_system.forms
 {
     public partial class DocumentQueue : Form
     {
+
         public DocumentQueue()
         {
             InitializeComponent();
+            cmbStatus.SelectedIndex = 0;
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            displayRequests();
+            
+        }
+
+        public void displayRequests()
+        {
             pnlResults.Controls.Clear();
-
-            DocumentRequestsDAO documentRequestsDAO= new DocumentRequestsDAO();
-            MySqlDataReader reader = documentRequestsDAO.getDocumentRequests();
+            string status = cmbStatus.SelectedItem.ToString();
+            DocumentRequestsDAO documentRequestsDAO = new DocumentRequestsDAO();
+            MySqlDataReader reader = documentRequestsDAO.getDocumentRequests(status);
 
             while (reader.Read())
             {
-                RequestSinglePanel rsp = new RequestSinglePanel(reader.GetString("id"), 
+                RequestSinglePanel rsp = new RequestSinglePanel(reader.GetString("id"),
                     reader.GetString("document_type"), reader.GetString("requested_by"), reader.GetString("status"));
 
                 pnlResults.Controls.Add(rsp);
@@ -50,7 +59,13 @@ namespace cutcot_info_system.forms
 
 
         }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displayRequests();
+        }
     }
+
 
     class RequestSinglePanel : Panel
     {
@@ -118,7 +133,14 @@ namespace cutcot_info_system.forms
             btnView.FlatStyle = FlatStyle.Flat;
             btnView.Dock = DockStyle.Left;
 
+            Button btnMarkAsDone = new Button();
+            btnMarkAsDone.Text = "Done";
+            btnMarkAsDone.FlatStyle = FlatStyle.Flat;
+            btnMarkAsDone.Dock = DockStyle.Left;
+
             this.Controls.Add(btnView);
+            this.Controls.Add(btnPrint);
+
             this.Controls.Add(lblStatus);
             this.Controls.Add(spacer);
             this.Controls.Add(lblDate);
@@ -126,17 +148,22 @@ namespace cutcot_info_system.forms
             this.Controls.Add(lblNature);
             this.Controls.Add(spacer1);
             this.Controls.Add(lblCaseNo);
-            this.Controls.Add(btnPrint);
+
+
+            this.Controls.Add(btnMarkAsDone);
             this.Controls.Add(btnRemove);
 
            
             btnView.Cursor = System.Windows.Forms.Cursors.Hand;
             btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnMarkAsDone.Cursor = System.Windows.Forms.Cursors.Hand;
 
             btnRemove.MouseDown += handleDelete;
             btnPrint.MouseDown += handlePrint;
             btnView.MouseDown += handleClick;
+            btnMarkAsDone.MouseDown += handleDone;
+     
         }
         ViewReport viewReport;
 
@@ -181,6 +208,17 @@ namespace cutcot_info_system.forms
                     this.Visible = false;
                 }
             }
+        }
+
+        private void handleDone(object sender,EventArgs e)
+        {
+                DocumentRequestsDAO documentRequestsDAO = new DocumentRequestsDAO();
+                Boolean markRequestResult = documentRequestsDAO.markRequestAsDone(requestNo);
+                if (markRequestResult == true)
+                {
+                    this.Visible = false;
+                }
+            
         }
         private void handlePrint(object sender, EventArgs e)
         {

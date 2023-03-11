@@ -234,6 +234,7 @@
             this.listHearings.Size = new System.Drawing.Size(574, 270);
             this.listHearings.TabIndex = 6;
             this.listHearings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listHearings_MouseDown);
+            this.listHearings.SelectedIndexChanged += new System.EventHandler(this.listHearings_SelectedIndexChanged);
             // 
             // panel19
             // 
@@ -319,6 +320,7 @@
             this.listRequests.Name = "listRequests";
             this.listRequests.Size = new System.Drawing.Size(552, 270);
             this.listRequests.TabIndex = 7;
+            this.listRequests.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listRequests_MouseClick);
             // 
             // panel21
             // 

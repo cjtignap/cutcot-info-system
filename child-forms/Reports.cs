@@ -12,55 +12,75 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace cutcot_info_system.forms
 {
     public partial class Reports : Form
     {
+
+       
+       
         public Reports()
         {
             InitializeComponent();
+            cmbNature.SelectedIndex = 0;
+            cmbNature.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            displayReports();
         }
 
-        private void Reports_Load(object sender, EventArgs e)
+
+        public void displayReports()
         {
-
-        }
-
-        private void cmbNature_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            string searchType = cmbNature.SelectedItem.ToString();
             pnlResults.Controls.Clear();
             string query = txtQuery.Text;
+
+            switch (searchType)
+            {
+                case "name":
+                    break;
+                case "case no":
+                    searchType = "case_no";
+                    break;
+                case "status":
+                    break;
+                case "page":
+                    break;
+                case "nature":
+                    break;
+                case "type":
+                    break;
+                default:
+                    break;
+
+            }
+
+
             ReportInfoDAO reportInfoDAO = new();
-            MySqlDataReader reader = reportInfoDAO.getReportsByName(query);
-            
-            
+            MySqlDataReader reader = reportInfoDAO.getReports(query, searchType);
+
 
             while (reader.Read())
             {
 
                 resultSinglePanel rsp = new resultSinglePanel(reader.GetString("case_no"), reader.GetString("nature_of_dispute"), reader.GetString("date"));
-                
+
                 pnlResults.Controls.Add(rsp);
 
                 Panel spacer = new Panel();
                 spacer.Size = new Size(100, 10);
                 spacer.Dock = DockStyle.Top;
                 pnlResults.Controls.Add(spacer);
-                
+
             }
             reader.Close();
             ConnectMySql.getMySqlConnection().Close();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            displayReports();
         }
 
        

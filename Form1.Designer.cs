@@ -35,8 +35,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsesrname = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -110,8 +110,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtPassword);
+            this.panel2.Controls.Add(this.txtUsesrname);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -123,22 +123,22 @@
             this.panel2.Size = new System.Drawing.Size(386, 405);
             this.panel2.TabIndex = 1;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(122, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '•';
-            this.textBox2.Size = new System.Drawing.Size(173, 24);
-            this.textBox2.TabIndex = 6;
+            this.txtPassword.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(122, 207);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(173, 24);
+            this.txtPassword.TabIndex = 6;
             // 
-            // textBox1
+            // txtUsesrname
             // 
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(122, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 24);
-            this.textBox1.TabIndex = 5;
+            this.txtUsesrname.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsesrname.Location = new System.Drawing.Point(122, 178);
+            this.txtUsesrname.Name = "txtUsesrname";
+            this.txtUsesrname.Size = new System.Drawing.Size(173, 24);
+            this.txtUsesrname.TabIndex = 5;
             // 
             // button1
             // 
@@ -227,8 +227,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPassword;
+        private TextBox txtUsesrname;
         private Button button1;
         private Label label4;
         private PictureBox pictureBox1;

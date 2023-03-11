@@ -59,13 +59,15 @@ namespace cutcot_info_system.controllers
             mySqlConnection.Close();
             return lastId;
         }
-        public MySqlDataReader getDocumentRequests()
+
+
+        public MySqlDataReader getDocumentRequests(string status)
         {
-            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection(); 
             try
             {
                 mySqlConnection.Open();
-                string sql = "SELECT * from `requests` ORDER BY `id` DESC;";
+                string sql = "SELECT * from `requests` where `status` = '"+status+"' ORDER BY `id` asc limit 50;";
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 return reader;
@@ -123,10 +125,33 @@ namespace cutcot_info_system.controllers
             try
             {
                 mySqlConnection.Open();
-                string sql = "delete from `requests` where `id` = "+request_no+"";
+                string sql = "update `requests` set `status` = 'REMOVED' where `id` = "+request_no+"";
                 MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Request sucessfully removed.");
+
+                mySqlConnection.Close();
+                return true;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+
+                mySqlConnection.Close();
+                return false;
+            }
+        }
+
+        public Boolean markRequestAsDone(string request_no)
+        {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+            try
+            {
+                mySqlConnection.Open();
+                string sql = "update `requests` set `status` = 'FULFILLED' where `id` = " + request_no + "";
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Request mark as done.");
 
                 mySqlConnection.Close();
                 return true;

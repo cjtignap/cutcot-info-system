@@ -31,9 +31,20 @@ namespace cutcot_info_system
         private void button1_Click(object sender, EventArgs e)
         {
             Main main = new Main();
-            main.Show();
 
-            this.Hide();
+            string userName = txtUsesrname.Text.Trim();
+            string password = txtPassword.Text;
+            
+            if(userName=="admin"&&password== "031418003")
+            {
+                main.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong username or password!");
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
