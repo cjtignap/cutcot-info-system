@@ -145,7 +145,7 @@
             this.txtPhone1st.RightMargin = 10;
             this.txtPhone1st.Size = new System.Drawing.Size(326, 20);
             this.txtPhone1st.TabIndex = 1;
-            this.txtPhone1st.Text = "8888";
+            this.txtPhone1st.Text = "";
             this.txtPhone1st.WordWrap = false;
             // 
             // label6
@@ -180,7 +180,7 @@
             this.txtAge1st.RightMargin = 10;
             this.txtAge1st.Size = new System.Drawing.Size(112, 20);
             this.txtAge1st.TabIndex = 1;
-            this.txtAge1st.Text = "21";
+            this.txtAge1st.Text = "";
             this.txtAge1st.WordWrap = false;
             // 
             // panel3
@@ -205,7 +205,7 @@
             this.txtAddress1st.RightMargin = 10;
             this.txtAddress1st.Size = new System.Drawing.Size(338, 20);
             this.txtAddress1st.TabIndex = 1;
-            this.txtAddress1st.Text = "001-2023";
+            this.txtAddress1st.Text = "";
             this.txtAddress1st.WordWrap = false;
             // 
             // label5
@@ -250,13 +250,13 @@
             this.txtName1st.RightMargin = 10;
             this.txtName1st.Size = new System.Drawing.Size(353, 20);
             this.txtName1st.TabIndex = 1;
-            this.txtName1st.Text = "Reynaldo San Pedro";
+            this.txtName1st.Text = "";
             this.txtName1st.WordWrap = false;
             // 
             // lblSelectedImage
             // 
             this.lblSelectedImage.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectedImage.Location = new System.Drawing.Point(204, 269);
+            this.lblSelectedImage.Location = new System.Drawing.Point(218, 308);
             this.lblSelectedImage.Name = "lblSelectedImage";
             this.lblSelectedImage.Size = new System.Drawing.Size(226, 51);
             this.lblSelectedImage.TabIndex = 54;
@@ -266,7 +266,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(80, 260);
+            this.button1.Location = new System.Drawing.Point(94, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 38);
             this.button1.TabIndex = 53;
@@ -278,7 +278,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(55, 235);
+            this.label15.Location = new System.Drawing.Point(69, 274);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(161, 22);
             this.label15.TabIndex = 52;
@@ -288,7 +288,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(55, 160);
+            this.label14.Location = new System.Drawing.Point(69, 199);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 22);
             this.label14.TabIndex = 51;
@@ -298,7 +298,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.panel12.Controls.Add(this.txtPageNo);
-            this.panel12.Location = new System.Drawing.Point(70, 185);
+            this.panel12.Location = new System.Drawing.Point(84, 224);
             this.panel12.Name = "panel12";
             this.panel12.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel12.Size = new System.Drawing.Size(293, 35);
@@ -378,7 +378,7 @@
             this.txtPhone2nd.RightMargin = 10;
             this.txtPhone2nd.Size = new System.Drawing.Size(326, 20);
             this.txtPhone2nd.TabIndex = 1;
-            this.txtPhone2nd.Text = "1234";
+            this.txtPhone2nd.Text = "";
             this.txtPhone2nd.WordWrap = false;
             // 
             // label11
@@ -413,7 +413,7 @@
             this.txtAge2nd.RightMargin = 10;
             this.txtAge2nd.Size = new System.Drawing.Size(112, 20);
             this.txtAge2nd.TabIndex = 1;
-            this.txtAge2nd.Text = "22";
+            this.txtAge2nd.Text = "";
             this.txtAge2nd.WordWrap = false;
             // 
             // panel11
@@ -438,7 +438,7 @@
             this.txtAddress2nd.RightMargin = 10;
             this.txtAddress2nd.Size = new System.Drawing.Size(338, 20);
             this.txtAddress2nd.TabIndex = 1;
-            this.txtAddress2nd.Text = "Cutcot Calumpit";
+            this.txtAddress2nd.Text = "";
             this.txtAddress2nd.WordWrap = false;
             // 
             // label12
@@ -483,7 +483,7 @@
             this.txtName2nd.RightMargin = 10;
             this.txtName2nd.Size = new System.Drawing.Size(353, 20);
             this.txtName2nd.TabIndex = 1;
-            this.txtName2nd.Text = "Khen Manio";
+            this.txtName2nd.Text = "";
             this.txtName2nd.WordWrap = false;
             // 
             // cmbNature
@@ -512,7 +512,7 @@
             "Contract Issues",
             "Unmaterialized Agreements",
             "Property Related Concerns"});
-            this.cmbNature.Location = new System.Drawing.Point(70, 124);
+            this.cmbNature.Location = new System.Drawing.Point(84, 163);
             this.cmbNature.Name = "cmbNature";
             this.cmbNature.Size = new System.Drawing.Size(293, 30);
             this.cmbNature.TabIndex = 46;
@@ -522,7 +522,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(55, 99);
+            this.label2.Location = new System.Drawing.Point(69, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 22);
             this.label2.TabIndex = 45;
@@ -539,7 +539,7 @@
             "FOR THE RECORD",
             "AGREEMENT",
             "CASE NUMBER"});
-            this.cmbBlotterType.Location = new System.Drawing.Point(70, 51);
+            this.cmbBlotterType.Location = new System.Drawing.Point(84, 90);
             this.cmbBlotterType.Name = "cmbBlotterType";
             this.cmbBlotterType.Size = new System.Drawing.Size(293, 30);
             this.cmbBlotterType.TabIndex = 44;
@@ -549,7 +549,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(55, 26);
+            this.label1.Location = new System.Drawing.Point(69, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 22);
             this.label1.TabIndex = 42;
@@ -614,7 +614,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(135, 309);
+            this.button3.Location = new System.Drawing.Point(149, 348);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 34);
             this.button3.TabIndex = 62;
@@ -626,7 +626,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(55, 314);
+            this.label16.Location = new System.Drawing.Point(69, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 22);
             this.label16.TabIndex = 63;
@@ -636,7 +636,7 @@
             // 
             this.lblHearings.AutoSize = true;
             this.lblHearings.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHearings.Location = new System.Drawing.Point(73, 351);
+            this.lblHearings.Location = new System.Drawing.Point(87, 390);
             this.lblHearings.Name = "lblHearings";
             this.lblHearings.Size = new System.Drawing.Size(122, 19);
             this.lblHearings.TabIndex = 64;
