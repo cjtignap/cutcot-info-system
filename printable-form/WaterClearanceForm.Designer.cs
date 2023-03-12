@@ -118,7 +118,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 1017);
-            this.ControlBox = false;
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAddress);
@@ -126,7 +125,7 @@
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WaterClearanceForm";
             this.Text = "WaterClearanceForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

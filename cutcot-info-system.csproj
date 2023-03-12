@@ -7,7 +7,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>server.ico</ApplicationIcon>
+    <ApplicationIcon>pages.ico</ApplicationIcon>
+    <PackageIcon>pages.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +21,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="server.ico" />
+    <Content Include="pages.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Downloads\pages.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

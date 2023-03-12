@@ -66,6 +66,7 @@ namespace cutcot_info_system.printable_form
         public void prepareToPrint()
         {
             pictureBox1.BringToFront();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
     }
     

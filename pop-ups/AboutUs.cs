@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace cutcot_info_system.pop_ups
 {
-    public partial class ImageViewer : Form
+    public partial class AboutUs : Form
     {
-        public ImageViewer(Image image)
+        public AboutUs()
         {
             InitializeComponent();
-            //this.TopMost = true;
-            pictureBox1.Height = image.Height;
-            pictureBox1.Width = image.Width;
-            pictureBox1.Image = image;
         }
     }
 }

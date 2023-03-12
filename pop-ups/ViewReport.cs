@@ -1,10 +1,12 @@
 ﻿using cutcot_info_system.models;
 using cutcot_info_system.pop_ups;
+using cutcot_info_system.printable_form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +22,14 @@ namespace cutcot_info_system.child_forms
         Hearing secondHearing;
         Hearing thirdHearing;
         string report_id;
+
+        ReportInfo reportInfo;
         public ViewReport(ReportInfo reportInfo)
         {
             InitializeComponent();
-            this.TopMost = true;
+
+            this.reportInfo = reportInfo;
+            //this.TopMost = true;
 
             String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
             String currentPath = path + "/Cutcot Info System/reports";
@@ -79,6 +85,43 @@ namespace cutcot_info_system.child_forms
                     txtStatus.Text = changeStatus.status;
                 }
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            
+
+         
+
+            PrintPreviewDialog printPreviewDialog1 = new PrintPreviewDialog();
+            PrintDocument printDocument1 = new PrintDocument();
+            printPreviewDialog1.SetBounds(100, 100, 400, 518);
+            printPreviewDialog1.Document = printDocument1;
+            printDocument1.PrintPage += printDocument1_PrintPage;
+
+            BlotterReport blotterReport = new BlotterReport(reportInfo);
+            blotterReport.Show();
+
+            captureFromScreen(blotterReport.panelToPrint);
+
+            blotterReport.Hide();
+            printPreviewDialog1.ShowDialog();
+
+
+        }
+        private void captureFromScreen(Panel formToPrint)
+        {
+
+            original = new Bitmap(formToPrint.Width, formToPrint.Height);
+            formToPrint.DrawToBitmap(original, new Rectangle(0, 0, formToPrint.Width, formToPrint.Height ));
+            bitMaptoPrint = original;
+        }
+        Bitmap original;
+        Bitmap bitMaptoPrint;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Rectangle m = new Rectangle(0, 0, 816, 1056);
+            e.Graphics.DrawImage(original, m);
         }
     }
 }

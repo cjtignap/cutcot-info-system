@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlParent = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -40,7 +41,6 @@
             this.btnAddDoc = new System.Windows.Forms.Button();
             this.btnDocQueue = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.btnProcessDoc = new System.Windows.Forms.Button();
             this.btnAddNewReport = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -48,7 +48,6 @@
             this.btnMiniDocHistory = new System.Windows.Forms.Button();
             this.btnMinDocQueue = new System.Windows.Forms.Button();
             this.btnMiniReports = new System.Windows.Forms.Button();
-            this.btnMiniProcesssDoc = new System.Windows.Forms.Button();
             this.btnMiniAddNewReports = new System.Windows.Forms.Button();
             this.btnMiniDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -164,7 +163,6 @@
             this.pnlNavMain.Controls.Add(this.btnAddDoc);
             this.pnlNavMain.Controls.Add(this.btnDocQueue);
             this.pnlNavMain.Controls.Add(this.btnReports);
-            this.pnlNavMain.Controls.Add(this.btnProcessDoc);
             this.pnlNavMain.Controls.Add(this.btnAddNewReport);
             this.pnlNavMain.Controls.Add(this.btnDashboard);
             this.pnlNavMain.Controls.Add(this.panel6);
@@ -184,9 +182,9 @@
             this.btnAddDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDoc.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddDoc.ForeColor = System.Drawing.Color.White;
-            this.btnAddDoc.Image = global::cutcot_info_system.Properties.Resources.history;
+            this.btnAddDoc.Image = ((System.Drawing.Image)(resources.GetObject("btnAddDoc.Image")));
             this.btnAddDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDoc.Location = new System.Drawing.Point(0, 483);
+            this.btnAddDoc.Location = new System.Drawing.Point(0, 403);
             this.btnAddDoc.Margin = new System.Windows.Forms.Padding(10);
             this.btnAddDoc.Name = "btnAddDoc";
             this.btnAddDoc.Padding = new System.Windows.Forms.Padding(10);
@@ -209,7 +207,7 @@
             this.btnDocQueue.ForeColor = System.Drawing.Color.White;
             this.btnDocQueue.Image = global::cutcot_info_system.Properties.Resources.queue;
             this.btnDocQueue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocQueue.Location = new System.Drawing.Point(0, 411);
+            this.btnDocQueue.Location = new System.Drawing.Point(0, 331);
             this.btnDocQueue.Margin = new System.Windows.Forms.Padding(10);
             this.btnDocQueue.Name = "btnDocQueue";
             this.btnDocQueue.Padding = new System.Windows.Forms.Padding(10);
@@ -232,7 +230,7 @@
             this.btnReports.ForeColor = System.Drawing.Color.White;
             this.btnReports.Image = global::cutcot_info_system.Properties.Resources.clipboard;
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(0, 345);
+            this.btnReports.Location = new System.Drawing.Point(0, 265);
             this.btnReports.Margin = new System.Windows.Forms.Padding(10);
             this.btnReports.Name = "btnReports";
             this.btnReports.Padding = new System.Windows.Forms.Padding(10);
@@ -243,28 +241,6 @@
             this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click_1);
-            // 
-            // btnProcessDoc
-            // 
-            this.btnProcessDoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
-            this.btnProcessDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProcessDoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProcessDoc.FlatAppearance.BorderSize = 0;
-            this.btnProcessDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcessDoc.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProcessDoc.ForeColor = System.Drawing.Color.White;
-            this.btnProcessDoc.Image = global::cutcot_info_system.Properties.Resources.printer;
-            this.btnProcessDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcessDoc.Location = new System.Drawing.Point(0, 265);
-            this.btnProcessDoc.Name = "btnProcessDoc";
-            this.btnProcessDoc.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
-            this.btnProcessDoc.Size = new System.Drawing.Size(168, 80);
-            this.btnProcessDoc.TabIndex = 8;
-            this.btnProcessDoc.Text = "PROCESS DOCUMENT";
-            this.btnProcessDoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcessDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProcessDoc.UseVisualStyleBackColor = false;
-            this.btnProcessDoc.Click += new System.EventHandler(this.btnProcessDoc_Click);
             // 
             // btnAddNewReport
             // 
@@ -326,7 +302,6 @@
             this.pnlNavIcons.Controls.Add(this.btnMiniDocHistory);
             this.pnlNavIcons.Controls.Add(this.btnMinDocQueue);
             this.pnlNavIcons.Controls.Add(this.btnMiniReports);
-            this.pnlNavIcons.Controls.Add(this.btnMiniProcesssDoc);
             this.pnlNavIcons.Controls.Add(this.btnMiniAddNewReports);
             this.pnlNavIcons.Controls.Add(this.btnMiniDashboard);
             this.pnlNavIcons.Controls.Add(this.panel3);
@@ -346,9 +321,9 @@
             this.btnMiniDocHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMiniDocHistory.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMiniDocHistory.ForeColor = System.Drawing.Color.White;
-            this.btnMiniDocHistory.Image = global::cutcot_info_system.Properties.Resources.history;
+            this.btnMiniDocHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnMiniDocHistory.Image")));
             this.btnMiniDocHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiniDocHistory.Location = new System.Drawing.Point(0, 483);
+            this.btnMiniDocHistory.Location = new System.Drawing.Point(0, 403);
             this.btnMiniDocHistory.Margin = new System.Windows.Forms.Padding(10);
             this.btnMiniDocHistory.Name = "btnMiniDocHistory";
             this.btnMiniDocHistory.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
@@ -370,7 +345,7 @@
             this.btnMinDocQueue.ForeColor = System.Drawing.Color.White;
             this.btnMinDocQueue.Image = global::cutcot_info_system.Properties.Resources.queue;
             this.btnMinDocQueue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMinDocQueue.Location = new System.Drawing.Point(0, 411);
+            this.btnMinDocQueue.Location = new System.Drawing.Point(0, 331);
             this.btnMinDocQueue.Margin = new System.Windows.Forms.Padding(10);
             this.btnMinDocQueue.Name = "btnMinDocQueue";
             this.btnMinDocQueue.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
@@ -392,7 +367,7 @@
             this.btnMiniReports.ForeColor = System.Drawing.Color.White;
             this.btnMiniReports.Image = global::cutcot_info_system.Properties.Resources.clipboard;
             this.btnMiniReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiniReports.Location = new System.Drawing.Point(0, 345);
+            this.btnMiniReports.Location = new System.Drawing.Point(0, 265);
             this.btnMiniReports.Margin = new System.Windows.Forms.Padding(10);
             this.btnMiniReports.Name = "btnMiniReports";
             this.btnMiniReports.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
@@ -402,27 +377,6 @@
             this.btnMiniReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMiniReports.UseVisualStyleBackColor = false;
             this.btnMiniReports.Click += new System.EventHandler(this.btnMiniReports_Click_1);
-            // 
-            // btnMiniProcesssDoc
-            // 
-            this.btnMiniProcesssDoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
-            this.btnMiniProcesssDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMiniProcesssDoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMiniProcesssDoc.FlatAppearance.BorderSize = 0;
-            this.btnMiniProcesssDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiniProcesssDoc.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMiniProcesssDoc.ForeColor = System.Drawing.Color.White;
-            this.btnMiniProcesssDoc.Image = global::cutcot_info_system.Properties.Resources.printer;
-            this.btnMiniProcesssDoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiniProcesssDoc.Location = new System.Drawing.Point(0, 265);
-            this.btnMiniProcesssDoc.Name = "btnMiniProcesssDoc";
-            this.btnMiniProcesssDoc.Padding = new System.Windows.Forms.Padding(0, 20, 10, 10);
-            this.btnMiniProcesssDoc.Size = new System.Drawing.Size(46, 80);
-            this.btnMiniProcesssDoc.TabIndex = 8;
-            this.btnMiniProcesssDoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiniProcesssDoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMiniProcesssDoc.UseVisualStyleBackColor = false;
-            this.btnMiniProcesssDoc.Click += new System.EventHandler(this.btnMiniProcesssDoc_Click);
             // 
             // btnMiniAddNewReports
             // 
@@ -508,8 +462,6 @@
         private Button btnAddNewReport;
         private Button btnDashboard;
         private Panel panel6;
-        private Button btnProcessDoc;
-        private Button btnMiniProcesssDoc;
         private Panel panel4;
         private Label btnCollapse;
         private Panel panel2;

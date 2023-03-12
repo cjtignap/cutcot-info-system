@@ -19,7 +19,7 @@ namespace cutcot_info_system.pop_ups
         {
             InitializeComponent();
             this.hearing = hearing;
-            this.TopMost = true;
+            //this.TopMost = true;
             txtRemarks.Text = hearing.remarks;
             dateHearing.Value = hearing.hearingSchedule.ToDateTime(TimeOnly.Parse("10:00 PM"));
         }

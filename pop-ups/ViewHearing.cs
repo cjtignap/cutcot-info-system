@@ -24,7 +24,7 @@ namespace cutcot_info_system.pop_ups
         public ViewHearing(Hearing firstHearing, Hearing secondHearing, Hearing thirdHearing,string report_id)
         {
             InitializeComponent();
-            this.TopMost = true;
+            //this.TopMost = true;
             this.firstHearing = firstHearing;
             this.secondHearing = secondHearing;
             this.thirdHearing = thirdHearing;

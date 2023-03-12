@@ -66,12 +66,6 @@ namespace cutcot_info_system
                     btnMiniAddNewReports.BackColor = Color.FromArgb(142, 167, 233);
                     btnAddNewReport.BackColor = Color.FromArgb(142, 167, 233);
                 }
-                else if (formName == "Process document")
-                {
-                    btnProcessDoc.BackColor = Color.FromArgb(142, 167, 233);
-                    btnMiniProcesssDoc.BackColor = Color.FromArgb(142, 167, 233);
-
-                }
                 else if (formName== "Reports")
                 {
                     btnReports.BackColor = Color.FromArgb(142, 167, 233);
@@ -105,8 +99,6 @@ namespace cutcot_info_system
             btnDashboard.BackColor = Color.FromArgb(114, 134, 211);
             btnMiniAddNewReports.BackColor = Color.FromArgb(114, 134, 211);
             btnAddNewReport.BackColor = Color.FromArgb(114, 134, 211);
-            btnMiniProcesssDoc.BackColor = Color.FromArgb(114, 134, 211);
-            btnProcessDoc.BackColor = Color.FromArgb(114, 134, 211);
             btnMiniReports.BackColor = Color.FromArgb(114, 134, 211);
             btnReports.BackColor = Color.FromArgb(114, 134, 211);
             btnMinDocQueue.BackColor = Color.FromArgb(114, 134, 211);

@@ -1,6 +1,7 @@
 using cutcot_info_system.custom_controls;
 using cutcot_info_system.models;
 using cutcot_info_system.mysql_things;
+using cutcot_info_system.pop_ups;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
 using System.IO;
@@ -34,8 +35,8 @@ namespace cutcot_info_system
 
             string userName = txtUsesrname.Text.Trim();
             string password = txtPassword.Text;
-            
-            if(userName=="admin"&&password== "031418003")
+            //031418003
+            if (userName=="admin"&&password== "031418003")
             {
                 main.Show();
                 this.Hide();
@@ -50,6 +51,12 @@ namespace cutcot_info_system
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            AboutUs about = new();
+            about.ShowDialog();
         }
     }
 }

@@ -239,8 +239,8 @@ namespace cutcot_info_system.forms
 
                 captureFromScreen(businessClearanceForm);
 
-                printPreviewDialog1.ShowDialog();
                 businessClearanceForm.Hide();
+                printPreviewDialog1.ShowDialog();
                 businessClearanceForm.Dispose();
             }
             else if (document_type == "WATER_CLEARANCE")
@@ -253,8 +253,8 @@ namespace cutcot_info_system.forms
 
                 captureFromScreen(waterClearanceForm);
 
-                printPreviewDialog1.ShowDialog();
                 waterClearanceForm.Hide();
+                printPreviewDialog1.ShowDialog();
                 waterClearanceForm.Dispose();
 
             }
@@ -268,8 +268,8 @@ namespace cutcot_info_system.forms
 
                 captureFromScreen(wiringClearanceForm);
 
-                printPreviewDialog1.ShowDialog();
                 wiringClearanceForm.Hide();
+                printPreviewDialog1.ShowDialog();
                 wiringClearanceForm.Dispose();
 
             }
@@ -288,7 +288,7 @@ namespace cutcot_info_system.forms
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             Rectangle m = new Rectangle(0, 0, 816, 1056);
-            e.Graphics.DrawImage(bitMaptoPrint, m);
+            e.Graphics.DrawImage(original, m);
         }
 
     }

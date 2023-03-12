@@ -112,13 +112,12 @@
             this.lblDate.TabIndex = 15;
             this.lblDate.Text = "27th";
             // 
-            // WiringClearance
+            // WiringClearanceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 1017);
-            this.ControlBox = false;
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAddress);
@@ -126,8 +125,8 @@
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "WiringClearance";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "WiringClearanceForm";
             this.Text = "WiringClearance";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

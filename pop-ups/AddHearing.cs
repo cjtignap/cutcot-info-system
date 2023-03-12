@@ -20,7 +20,7 @@ namespace cutcot_info_system.pop_ups
         public AddHearing()
         {
             InitializeComponent();
-            this.TopMost = true;
+            //this.TopMost = true;
         }
 
        

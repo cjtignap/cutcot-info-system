@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReport));
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -431,7 +433,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(58, 172);
+            this.label14.Location = new System.Drawing.Point(35, 127);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 22);
             this.label14.TabIndex = 55;
@@ -441,7 +443,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(58, 122);
+            this.label2.Location = new System.Drawing.Point(35, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 22);
             this.label2.TabIndex = 53;
@@ -451,7 +453,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(58, 91);
+            this.label1.Location = new System.Drawing.Point(35, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 22);
             this.label1.TabIndex = 52;
@@ -461,7 +463,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(58, 199);
+            this.label15.Location = new System.Drawing.Point(35, 154);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(100, 22);
             this.label15.TabIndex = 56;
@@ -471,7 +473,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(58, 256);
+            this.label16.Location = new System.Drawing.Point(35, 211);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(107, 22);
             this.label16.TabIndex = 57;
@@ -481,7 +483,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(58, 228);
+            this.label17.Location = new System.Drawing.Point(35, 183);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(68, 22);
             this.label17.TabIndex = 58;
@@ -491,7 +493,7 @@
             // 
             this.txtBlotterType.AutoSize = true;
             this.txtBlotterType.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBlotterType.Location = new System.Drawing.Point(174, 89);
+            this.txtBlotterType.Location = new System.Drawing.Point(151, 44);
             this.txtBlotterType.Name = "txtBlotterType";
             this.txtBlotterType.Size = new System.Drawing.Size(61, 22);
             this.txtBlotterType.TabIndex = 59;
@@ -501,7 +503,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Open Sans SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(58, 146);
+            this.label3.Location = new System.Drawing.Point(35, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 22);
             this.label3.TabIndex = 60;
@@ -511,7 +513,7 @@
             // 
             this.txtNature.AutoSize = true;
             this.txtNature.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNature.Location = new System.Drawing.Point(216, 122);
+            this.txtNature.Location = new System.Drawing.Point(193, 77);
             this.txtNature.Name = "txtNature";
             this.txtNature.Size = new System.Drawing.Size(61, 22);
             this.txtNature.TabIndex = 61;
@@ -521,7 +523,7 @@
             // 
             this.txtCase.AutoSize = true;
             this.txtCase.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCase.Location = new System.Drawing.Point(135, 146);
+            this.txtCase.Location = new System.Drawing.Point(112, 101);
             this.txtCase.Name = "txtCase";
             this.txtCase.Size = new System.Drawing.Size(61, 22);
             this.txtCase.TabIndex = 62;
@@ -531,7 +533,7 @@
             // 
             this.txtPage.AutoSize = true;
             this.txtPage.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPage.Location = new System.Drawing.Point(135, 172);
+            this.txtPage.Location = new System.Drawing.Point(112, 127);
             this.txtPage.Name = "txtPage";
             this.txtPage.Size = new System.Drawing.Size(61, 22);
             this.txtPage.TabIndex = 63;
@@ -541,7 +543,7 @@
             // 
             this.txtDateSaved.AutoSize = true;
             this.txtDateSaved.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDateSaved.Location = new System.Drawing.Point(164, 199);
+            this.txtDateSaved.Location = new System.Drawing.Point(141, 154);
             this.txtDateSaved.Name = "txtDateSaved";
             this.txtDateSaved.Size = new System.Drawing.Size(61, 22);
             this.txtDateSaved.TabIndex = 64;
@@ -551,7 +553,7 @@
             // 
             this.txtStatus.AutoSize = true;
             this.txtStatus.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtStatus.Location = new System.Drawing.Point(132, 228);
+            this.txtStatus.Location = new System.Drawing.Point(109, 183);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(61, 22);
             this.txtStatus.TabIndex = 65;
@@ -561,7 +563,7 @@
             // 
             this.pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox.Image = global::cutcot_info_system.Properties.Resources.undraw_Maintenance_re_59vn_removebg_preview;
-            this.pictureBox.Location = new System.Drawing.Point(68, 281);
+            this.pictureBox.Location = new System.Drawing.Point(45, 236);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(500, 353);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -577,7 +579,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(264, 246);
+            this.button2.Location = new System.Drawing.Point(241, 201);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 32);
             this.button2.TabIndex = 67;
@@ -593,7 +595,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(448, 246);
+            this.button1.Location = new System.Drawing.Point(425, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 32);
             this.button1.TabIndex = 68;
@@ -601,12 +603,31 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Open Sans SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.ForeColor = System.Drawing.Color.Navy;
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(450, 606);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(93, 40);
+            this.btnPrint.TabIndex = 69;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // ViewReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1256, 658);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox);
@@ -693,5 +714,6 @@
         private PictureBox pictureBox;
         private Button button2;
         private Button button1;
+        private Button btnPrint;
     }
 }

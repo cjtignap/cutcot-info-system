@@ -20,7 +20,7 @@ namespace cutcot_info_system.pop_ups
         {
             InitializeComponent();
             this.case_no = case_no;
-            this.TopMost = true;
+            //this.TopMost = true;
             cmbStatus.SelectedIndex = 0;
         }
 

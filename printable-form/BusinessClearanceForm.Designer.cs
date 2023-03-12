@@ -125,7 +125,7 @@
             this.Controls.Add(this.lblBusinessName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "BusinessClearanceForm";
             this.Text = "BusinessClearanceForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
