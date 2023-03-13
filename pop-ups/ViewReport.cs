@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,10 +32,8 @@ namespace cutcot_info_system.child_forms
             this.reportInfo = reportInfo;
             //this.TopMost = true;
 
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            String currentPath = path + "/Cutcot Info System/reports";
+            
             report_id = reportInfo.case_no;
-            reportImage = Image.FromFile(currentPath + "/" + reportInfo.record_photo);
             txtBlotterType.Text = reportInfo.report_type;
             txtStatus.Text = reportInfo.status;
             txtCase.Text = reportInfo.case_no;
@@ -48,11 +47,36 @@ namespace cutcot_info_system.child_forms
             txtAge1st.Text = reportInfo.first_party_info.age + "";
             txtAge2nd.Text = reportInfo.second_party_info.age + "";
             txtAddress1st.Text = reportInfo.first_party_info.address;
-            txtAddress2nd.Text = reportInfo.second_party_info.address; 
+            txtAddress2nd.Text = reportInfo.second_party_info.address;
+
+
+            loadImage();
+
             pictureBox.Image = reportImage;
             firstHearing = reportInfo.firstHearing;
             secondHearing = reportInfo.secondHearing;
             thirdHearing = reportInfo.thirdHearing;
+        }
+        private void loadImage()
+        {
+
+            try
+            {
+                using (WebClient client = new())
+                {
+                    client.Credentials = new NetworkCredential("dbadmin", "password");
+                    string ftpLink = "ftp://192.168.1.2/images/"+reportInfo.record_photo;
+
+                    Stream imageStream = client.OpenRead(ftpLink);
+                    reportImage = System.Drawing.Image.FromStream(imageStream);
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
         private void pictureBox_Click(object sender, EventArgs e)

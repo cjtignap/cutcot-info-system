@@ -5,6 +5,7 @@ using cutcot_info_system.pop_ups;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Net;
 
 namespace cutcot_info_system
 {
@@ -17,6 +18,8 @@ namespace cutcot_info_system
             String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
             path = path + "/Cutcot Info System/reports";
             System.IO.Directory.CreateDirectory(path);
+
+            
         }
 
      

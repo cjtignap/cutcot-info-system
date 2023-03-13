@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
 using cutcot_info_system.pop_ups;
+using System.Net;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace cutcot_info_system.forms
 {
@@ -24,7 +26,6 @@ namespace cutcot_info_system.forms
         private Hearing secondHearing;
         private Hearing thirdHearing;
         private String hearingText;
-
         public AddNewReport()
         {
             InitializeComponent();
@@ -63,8 +64,9 @@ namespace cutcot_info_system.forms
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                  selectedImage = openFileDialog1.FileName;
+               
                 lblSelectedImage.Text = selectedImage;
-                selectedImageStream=openFileDialog1.OpenFile();
+                
             }
         }
 
@@ -77,17 +79,18 @@ namespace cutcot_info_system.forms
 
             try
             {
-                String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-                String currentPath = path + "/Cutcot Info System/reports/";
 
-                using (Stream saveFile = File.Create(currentPath + generatedFileName))
+                using (WebClient client = new())
                 {
-                    selectedImageStream.CopyTo(saveFile);
+                    client.Credentials = new NetworkCredential("dbadmin", "password");
+                    string ftpLink = "ftp://192.168.1.2/images/" +generatedFileName;
+
+                    client.UploadFile(ftpLink, WebRequestMethods.Ftp.UploadFile,selectedImage);
                 }
             }
             catch(Exception e)
             {
-                MessageBox.Show("Failed to save Image");
+                MessageBox.Show("Problem Uploading Image");
             }
         }
       
