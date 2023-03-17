@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblError2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,6 +50,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtPageNo = new System.Windows.Forms.RichTextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lblError3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -89,6 +91,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.lblError2);
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.panel5);
@@ -102,6 +105,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(628, 304);
             this.panel6.TabIndex = 48;
+            // 
+            // lblError2
+            // 
+            this.lblError2.AutoSize = true;
+            this.lblError2.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblError2.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblError2.Location = new System.Drawing.Point(233, 178);
+            this.lblError2.Name = "lblError2";
+            this.lblError2.Size = new System.Drawing.Size(130, 16);
+            this.lblError2.TabIndex = 67;
+            this.lblError2.Text = "Enter only valid age";
             // 
             // label8
             // 
@@ -166,7 +180,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel4.Size = new System.Drawing.Size(127, 35);
-            this.panel4.TabIndex = 17;
+            this.panel4.TabIndex = 18;
             // 
             // txtAge1st
             // 
@@ -182,6 +196,7 @@
             this.txtAge1st.TabIndex = 1;
             this.txtAge1st.Text = "";
             this.txtAge1st.WordWrap = false;
+            this.txtAge1st.TextChanged += new System.EventHandler(this.txtAge1st_TextChanged);
             // 
             // panel3
             // 
@@ -191,7 +206,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel3.Size = new System.Drawing.Size(353, 35);
-            this.panel3.TabIndex = 18;
+            this.panel3.TabIndex = 17;
             // 
             // txtAddress1st
             // 
@@ -322,6 +337,7 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.lblError3);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Controls.Add(this.panel9);
@@ -335,6 +351,17 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(628, 304);
             this.panel8.TabIndex = 49;
+            // 
+            // lblError3
+            // 
+            this.lblError3.AutoSize = true;
+            this.lblError3.Font = new System.Drawing.Font("Inter", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblError3.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblError3.Location = new System.Drawing.Point(233, 179);
+            this.lblError3.Name = "lblError3";
+            this.lblError3.Size = new System.Drawing.Size(130, 16);
+            this.lblError3.TabIndex = 66;
+            this.lblError3.Text = "Enter only valid age";
             // 
             // label9
             // 
@@ -399,7 +426,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel10.Size = new System.Drawing.Size(127, 35);
-            this.panel10.TabIndex = 17;
+            this.panel10.TabIndex = 18;
             // 
             // txtAge2nd
             // 
@@ -415,6 +442,7 @@
             this.txtAge2nd.TabIndex = 1;
             this.txtAge2nd.Text = "";
             this.txtAge2nd.WordWrap = false;
+            this.txtAge2nd.TextChanged += new System.EventHandler(this.txtAge2nd_TextChanged);
             // 
             // panel11
             // 
@@ -424,7 +452,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
             this.panel11.Size = new System.Drawing.Size(353, 35);
-            this.panel11.TabIndex = 18;
+            this.panel11.TabIndex = 17;
             // 
             // txtAddress2nd
             // 
@@ -736,5 +764,7 @@
         private Button button3;
         private Label label16;
         private Label lblHearings;
+        private Label lblError2;
+        private Label lblError3;
     }
 }

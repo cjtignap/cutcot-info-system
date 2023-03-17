@@ -13,6 +13,7 @@ using System.Reflection;
 using cutcot_info_system.pop_ups;
 using System.Net;
 using static System.Net.Mime.MediaTypeNames;
+using cutcot_info_system.mysql_things;
 
 namespace cutcot_info_system.forms
 {
@@ -29,6 +30,11 @@ namespace cutcot_info_system.forms
         public AddNewReport()
         {
             InitializeComponent();
+            initialSetup();
+        }
+
+        public void initialSetup()
+        {
             cmbBlotterType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBlotterType.SelectedIndex = 0;
             cmbNature.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -38,8 +44,9 @@ namespace cutcot_info_system.forms
             txtWarning.Visible = false;
             hearingText = "No hearing";
             lblHearings.Text = hearingText;
+            lblError2.Visible = false;
+            lblError3.Visible = false;
         }
-
 
 
         private string generateFileName()
@@ -82,8 +89,9 @@ namespace cutcot_info_system.forms
 
                 using (WebClient client = new())
                 {
+                    string serverAddress = ConnectMySql.serverAddress;
                     client.Credentials = new NetworkCredential("dbadmin", "password");
-                    string ftpLink = "ftp://192.168.1.2/images/" +generatedFileName;
+                    string ftpLink = "ftp://"+ serverAddress + "/images/" +generatedFileName;
 
                     client.UploadFile(ftpLink, WebRequestMethods.Ftp.UploadFile,selectedImage);
                 }
@@ -151,6 +159,8 @@ namespace cutcot_info_system.forms
                     ReportInfoDAO reportInfoDAO = new ReportInfoDAO();
                     reportInfoDAO.insert(reportInfo);
                     saveImage();
+
+                    clearForm();
                 }
                 catch (Exception exc)
                 {
@@ -160,7 +170,31 @@ namespace cutcot_info_system.forms
 
             }
         }
+        private void clearForm()
+        {
+            txtPageNo.Text = "";
+            lblHearings.Text = "";
+            lblSelectedImage.Text = "";
 
+            txtAge1st.Clear();
+            txtAge2nd.Clear();
+            txtAddress1st.Clear();
+            txtAddress2nd.Clear();
+            txtAge1st.Clear();
+            txtAge2nd.Clear();
+            txtPhone1st.Clear();
+            txtPhone2nd.Clear();
+
+            selectedImage = "";
+            firstHearing = null;
+            secondHearing = null;
+            thirdHearing = null;
+
+
+            lblError2.Visible = false;
+            lblError3.Visible = false;
+            txtWarning.Visible = false;
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             using (AddHearing addHearing = new AddHearing())
@@ -192,5 +226,33 @@ namespace cutcot_info_system.forms
                 }
             }
         }
+
+        private void txtAge1st_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtAge1st.Text);
+                lblError2.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                lblError2.Visible = true;
+            }
+        }
+
+        private void txtAge2nd_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(txtAge2nd.Text);
+                lblError3.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                lblError3.Visible = true;
+            }
+        }
+
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using cutcot_info_system.models;
+using cutcot_info_system.mysql_things;
 using cutcot_info_system.pop_ups;
 using cutcot_info_system.printable_form;
 using System;
@@ -64,8 +65,9 @@ namespace cutcot_info_system.child_forms
             {
                 using (WebClient client = new())
                 {
+                    string serverAddress = ConnectMySql.serverAddress;
                     client.Credentials = new NetworkCredential("dbadmin", "password");
-                    string ftpLink = "ftp://192.168.1.2/images/"+reportInfo.record_photo;
+                    string ftpLink = "ftp://"+ serverAddress + "/images/"+reportInfo.record_photo;
 
                     Stream imageStream = client.OpenRead(ftpLink);
                     reportImage = System.Drawing.Image.FromStream(imageStream);

@@ -15,6 +15,8 @@ namespace cutcot_info_system.mysql_things
 
         private static MySqlConnection mySqlConnection;
         private ConnectMySql() { }
+
+        public static string serverAddress = "192.168.0.2";
         public static MySqlConnection getMySqlConnection()
         {
             if (mySqlConnection == null)
@@ -24,7 +26,7 @@ namespace cutcot_info_system.mysql_things
 
 
                 //string cs = @"server=localhost;userid=root;password=admin;database=cutcot-info-system";
-                string cs = @"server=192.168.1.2;userid=dbadmin;password=password;database=cutcot-info-system";
+                string cs = @"server="+ConnectMySql.serverAddress+";userid=dbadmin;password=password;database=cutcot-info-system";
                 mySqlConnection = new MySqlConnection(cs);
             }
             return mySqlConnection;

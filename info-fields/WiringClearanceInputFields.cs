@@ -39,6 +39,9 @@ namespace cutcot_info_system.info_fields
             wiringClearanceDAO.insert(wiringClearance);
 
             MessageBox.Show("Wiring Clearance request success !");
+            txtAddress.Text = "";
+            txtAge.Text = "";
+            txtName.Text = "";
         }
     }
 }

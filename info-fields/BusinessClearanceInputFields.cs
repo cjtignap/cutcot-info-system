@@ -49,6 +49,10 @@ namespace cutcot_info_system.info_fields
             BusinessClearanceDAO businessClearanceDAO = new BusinessClearanceDAO();
             businessClearanceDAO.insert(businessClearance);
             MessageBox.Show("Business Clearance request success!");
+
+            txtAddress.Text = "";
+            txtBusinessName.Text = "";
+            txtOwner.Text = "";
         }
     }
 }

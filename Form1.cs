@@ -15,10 +15,7 @@ namespace cutcot_info_system
         {
             InitializeComponent();
 
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            path = path + "/Cutcot Info System/reports";
-            System.IO.Directory.CreateDirectory(path);
-
+            this.ActiveControl = this.txtUsesrname;
             
         }
 
@@ -34,13 +31,20 @@ namespace cutcot_info_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
 
+
+            login();
+            
+        }
+
+        public void login()
+        {
             string userName = txtUsesrname.Text.Trim();
             string password = txtPassword.Text;
             //031418003
-            if (userName=="admin"&&password== "031418003")
+            if (userName == "barangaycutcot03" && password == "fightcutcot03")
             {
+                Main main = new Main();
                 main.Show();
                 this.Hide();
             }
@@ -48,7 +52,6 @@ namespace cutcot_info_system
             {
                 MessageBox.Show("Wrong username or password!");
             }
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,6 +63,14 @@ namespace cutcot_info_system
         {
             AboutUs about = new();
             about.ShowDialog();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
         }
     }
 }

@@ -39,6 +39,10 @@ namespace cutcot_info_system.info_fields
             waterClearanceDAO.insert(waterClearance);
 
             MessageBox.Show("Water Clearance request success !");
+
+            txtAddress.Text = "";
+            txtAge.Text = "";
+            txtName.Text = "";
         }
     }
 }
