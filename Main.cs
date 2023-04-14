@@ -235,5 +235,19 @@ namespace cutcot_info_system
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            Backup backup = new Backup();
+            OpenChildForm(backup, sender, "Backup / Sync");
+            this.Focus();
+        }
+
+        private void btnBackupMini_Click(object sender, EventArgs e)
+        {
+            Backup backup = new Backup();
+            OpenChildForm(backup, sender, "Backup / Sync");
+            this.Focus();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlNavMain = new System.Windows.Forms.Panel();
+            this.btnBackup = new System.Windows.Forms.Button();
             this.btnAddDoc = new System.Windows.Forms.Button();
             this.btnDocQueue = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pnlNavIcons = new System.Windows.Forms.Panel();
+            this.btnBackupMini = new System.Windows.Forms.Button();
             this.btnMiniDocHistory = new System.Windows.Forms.Button();
             this.btnMinDocQueue = new System.Windows.Forms.Button();
             this.btnMiniReports = new System.Windows.Forms.Button();
@@ -160,6 +162,7 @@
             // pnlNavMain
             // 
             this.pnlNavMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.pnlNavMain.Controls.Add(this.btnBackup);
             this.pnlNavMain.Controls.Add(this.btnAddDoc);
             this.pnlNavMain.Controls.Add(this.btnDocQueue);
             this.pnlNavMain.Controls.Add(this.btnReports);
@@ -172,6 +175,29 @@
             this.pnlNavMain.Name = "pnlNavMain";
             this.pnlNavMain.Size = new System.Drawing.Size(168, 771);
             this.pnlNavMain.TabIndex = 6;
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.btnBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBackup.FlatAppearance.BorderSize = 0;
+            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackup.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackup.ForeColor = System.Drawing.Color.White;
+            this.btnBackup.Image = ((System.Drawing.Image)(resources.GetObject("btnBackup.Image")));
+            this.btnBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackup.Location = new System.Drawing.Point(0, 475);
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(10);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Padding = new System.Windows.Forms.Padding(10);
+            this.btnBackup.Size = new System.Drawing.Size(168, 72);
+            this.btnBackup.TabIndex = 12;
+            this.btnBackup.Text = "BACKUP / SYNC";
+            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // btnAddDoc
             // 
@@ -299,6 +325,7 @@
             // pnlNavIcons
             // 
             this.pnlNavIcons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.pnlNavIcons.Controls.Add(this.btnBackupMini);
             this.pnlNavIcons.Controls.Add(this.btnMiniDocHistory);
             this.pnlNavIcons.Controls.Add(this.btnMinDocQueue);
             this.pnlNavIcons.Controls.Add(this.btnMiniReports);
@@ -311,6 +338,28 @@
             this.pnlNavIcons.Name = "pnlNavIcons";
             this.pnlNavIcons.Size = new System.Drawing.Size(46, 771);
             this.pnlNavIcons.TabIndex = 4;
+            // 
+            // btnBackupMini
+            // 
+            this.btnBackupMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(134)))), ((int)(((byte)(211)))));
+            this.btnBackupMini.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackupMini.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBackupMini.FlatAppearance.BorderSize = 0;
+            this.btnBackupMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackupMini.Font = new System.Drawing.Font("Inter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBackupMini.ForeColor = System.Drawing.Color.White;
+            this.btnBackupMini.Image = ((System.Drawing.Image)(resources.GetObject("btnBackupMini.Image")));
+            this.btnBackupMini.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackupMini.Location = new System.Drawing.Point(0, 475);
+            this.btnBackupMini.Margin = new System.Windows.Forms.Padding(10);
+            this.btnBackupMini.Name = "btnBackupMini";
+            this.btnBackupMini.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.btnBackupMini.Size = new System.Drawing.Size(46, 72);
+            this.btnBackupMini.TabIndex = 12;
+            this.btnBackupMini.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackupMini.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBackupMini.UseVisualStyleBackColor = false;
+            this.btnBackupMini.Click += new System.EventHandler(this.btnBackupMini_Click);
             // 
             // btnMiniDocHistory
             // 
@@ -476,5 +525,7 @@
         private Label lblHeader;
         private Button button2;
         private Panel pnlParent;
+        private Button btnBackup;
+        private Button btnBackupMini;
     }
 }

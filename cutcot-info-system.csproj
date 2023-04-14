@@ -32,7 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.60.0.2981" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.4.0" />
     <PackageReference Include="MySql.Data" Version="8.0.32" />
+    <PackageReference Include="MySqlBackup.NET" Version="2.3.8" />
     <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 

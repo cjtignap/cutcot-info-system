@@ -16,7 +16,14 @@ namespace cutcot_info_system
             InitializeComponent();
 
             this.ActiveControl = this.txtUsesrname;
-            
+
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            path = path + "/Cutcot Info System/backups/";
+            System.IO.Directory.CreateDirectory(path);
+
+            String path2 = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            path2 = path2+ "/Cutcot Info System/temp/";
+            System.IO.Directory.CreateDirectory(path2);
         }
 
      
@@ -31,8 +38,6 @@ namespace cutcot_info_system
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             login();
             
         }

@@ -1,6 +1,4 @@
-﻿using cutcot_info_system.models;
-using cutcot_info_system.mysql_things;
-using Google.Apis.Auth.OAuth2;
+﻿using cutcot_info_system.mysql_things;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -13,24 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cutcot_info_system
+namespace cutcot_info_system.child_forms
 {
-    public partial class TestingForm : Form
+    public partial class Backup : Form
     {
-        public TestingForm()
+        public Backup()
         {
             InitializeComponent();
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            downloadDatabase();
-            importDatabase();
-        }
-
-       
-        
         public void exportDatabase()
         {
 
@@ -55,11 +44,11 @@ namespace cutcot_info_system
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Something went wrong while exporting the database");
             }
-            
+
         }
 
         public void uploadDatabase()
@@ -121,11 +110,11 @@ namespace cutcot_info_system
             {
 
                 String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-                String file= path + "/Cutcot Info System/temp/backup.sql";
+                String file = path + "/Cutcot Info System/temp/backup.sql";
 
 
                 string constring = @"server=" + ConnectMySql.serverAddress + ";userid=dbadmin;password=password;database=cutcot-info-system";
-                
+
                 using (MySqlConnection conn = new MySqlConnection(constring))
                 {
                     using (MySqlCommand cmd = new MySqlCommand())
@@ -141,15 +130,25 @@ namespace cutcot_info_system
                     }
                 }
 
-                
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
-           
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            exportDatabase();
+            uploadDatabase();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            downloadDatabase();
+            importDatabase();
         }
     }
-
-
 }

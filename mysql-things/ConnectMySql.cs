@@ -16,7 +16,8 @@ namespace cutcot_info_system.mysql_things
         private static MySqlConnection mySqlConnection;
         private ConnectMySql() { }
 
-        public static string serverAddress = "192.168.0.2";
+        public static string serverAddress = "192.168.0.23";
+       // public static string serverAddress = "192.168.1.24";
         public static MySqlConnection getMySqlConnection()
         {
             if (mySqlConnection == null)
