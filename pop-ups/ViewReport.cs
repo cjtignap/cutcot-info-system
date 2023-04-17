@@ -53,10 +53,14 @@ namespace cutcot_info_system.child_forms
 
             loadImage();
 
-            pictureBox.Image = reportImage;
+            
             firstHearing = reportInfo.firstHearing;
             secondHearing = reportInfo.secondHearing;
             thirdHearing = reportInfo.thirdHearing;
+
+            this.ActiveControl = null;
+
+
         }
         private void loadImage()
         {
@@ -71,21 +75,29 @@ namespace cutcot_info_system.child_forms
 
                     Stream imageStream = client.OpenRead(ftpLink);
                     reportImage = System.Drawing.Image.FromStream(imageStream);
-
+                    pictureBox.Image = reportImage;
                 }
             }
-            catch (Exception e)
+            catch (System.Net.WebException e)
             {
-                MessageBox.Show(e.Message);
+                
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Something went wrong");
             }
 
         }
 
         private void pictureBox_Click(object sender, EventArgs e)
         {
-            ImageViewer imageViewer = new ImageViewer(reportImage);
-            imageViewer.ShowDialog();
-            imageViewer.Dispose();
+            if(reportImage != null)
+            {
+
+                ImageViewer imageViewer = new ImageViewer(reportImage);
+                imageViewer.ShowDialog();
+                imageViewer.Dispose();
+            }
         }
 
         private void ViewReport_Load(object sender, EventArgs e)
@@ -148,6 +160,32 @@ namespace cutcot_info_system.child_forms
         {
             Rectangle m = new Rectangle(0, 0, 816, 1056);
             e.Graphics.DrawImage(original, m);
+        }
+
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.FromArgb(214, 34, 46);
+            button3.ForeColor = Color.FromArgb(246, 248, 250);
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.ForeColor = Color.FromArgb(214, 34, 46);
+            button3.BackColor = Color.FromArgb(246, 248, 250);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to delete this report", "Confirm delete", MessageBoxButtons.OKCancel);
+            if(result == DialogResult.OK)
+            {
+                ReportInfoDAO report = new ReportInfoDAO();
+                report.deleteReport(report_id);
+                MessageBox.Show("Record sucesfully deleted.");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                this.Dispose();
+            }
         }
     }
 }

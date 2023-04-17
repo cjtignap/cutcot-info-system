@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace cutcot_info_system.forms
 {
@@ -76,6 +77,13 @@ namespace cutcot_info_system.forms
 
             }
             reader.Close();
+
+            resultSinglePanel rsp1 = new resultSinglePanel("Case #", "Nature of dispute", "Date");
+            rsp1.Enabled = false;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            pnlResults.Controls.Add(rsp1);
+
+
             ConnectMySql.getMySqlConnection().Close();
         }
         private void button2_Click(object sender, EventArgs e)
@@ -137,7 +145,12 @@ namespace cutcot_info_system.forms
 
             
             viewReport = new(reportInfo);
-            viewReport.ShowDialog();
+
+            var result =  viewReport.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                this.Visible = false;
+            }
 
             viewReport.Dispose();
         }

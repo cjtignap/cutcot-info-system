@@ -16,17 +16,15 @@ namespace cutcot_info_system.mysql_things
         private static MySqlConnection mySqlConnection;
         private ConnectMySql() { }
 
-        public static string serverAddress = "192.168.0.23";
-       // public static string serverAddress = "192.168.1.24";
+       //public static string serverAddress = "192.168.0.23";
+        //public static string serverAddress = "192.168.1.24";
+        public static string serverAddress = "localhost";
         public static MySqlConnection getMySqlConnection()
         {
             if (mySqlConnection == null)
             {
-                // XDocument xml = XDocument.Parse(Resources.database_info);
-                // string cs = (string)xml.Element("ConnectionString");
 
 
-                //string cs = @"server=localhost;userid=root;password=admin;database=cutcot-info-system";
                 string cs = @"server="+ConnectMySql.serverAddress+";userid=dbadmin;password=password;database=cutcot-info-system";
                 mySqlConnection = new MySqlConnection(cs);
             }

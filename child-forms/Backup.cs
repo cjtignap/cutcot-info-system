@@ -18,13 +18,14 @@ namespace cutcot_info_system.child_forms
         public Backup()
         {
             InitializeComponent();
+            lblBackupText.Visible = false;
+            lblSyncText.Visible = false;
         }
 
         public void exportDatabase()
         {
 
-            try
-            {
+            
                 String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
                 path = path + "/Cutcot Info System/backups/";
 
@@ -43,18 +44,13 @@ namespace cutcot_info_system.child_forms
                         }
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Something went wrong while exporting the database");
-            }
+           
 
         }
 
         public void uploadDatabase()
         {
-            try
-            {
+            
 
                 using (WebClient client = new())
                 {
@@ -67,19 +63,13 @@ namespace cutcot_info_system.child_forms
 
                     client.UploadFile(ftpLink, WebRequestMethods.Ftp.UploadFile, path);
 
-                    MessageBox.Show("Succesfully backed up");
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Something went wrong while uploading the database");
-            }
+            
         }
 
         public void downloadDatabase()
         {
-            try
-            {
+           
 
                 using (WebClient client = new())
                 {
@@ -97,17 +87,12 @@ namespace cutcot_info_system.child_forms
 
 
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            
         }
         public void importDatabase()
         {
 
-            try
-            {
+            
 
                 String path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
                 String file = path + "/Cutcot Info System/temp/backup.sql";
@@ -125,30 +110,79 @@ namespace cutcot_info_system.child_forms
                             conn.Open();
                             mb.ImportFromFile(file);
                             conn.Close();
-                            MessageBox.Show("Database Succesfully Synced");
                         }
                     }
                 }
-
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            exportDatabase();
-            uploadDatabase();
+            lblSyncText.Visible = false;
+            lblBackupText.Visible = true;
+            lblBackupText.Text = "Checking your internet connection...";
+            lblBackupText.ForeColor = Color.FromArgb(0, 123, 255);
+            if (Form1.CheckForInternetConnection())
+            {
+                try
+                {
+
+                    lblBackupText.Text = "Exporting database....";
+                    exportDatabase();
+                    lblBackupText.Text = "Uploading database.....";
+                    uploadDatabase();
+                    lblBackupText.Text = "Succesfully created a backup.";
+                    lblBackupText.ForeColor = Color.FromArgb(40, 167, 69);
+                }
+                catch(Exception ex)
+                {
+                    lblBackupText.Text = "Error exporting/uploading database!";
+                    lblBackupText.ForeColor = Color.FromArgb(220, 53, 69);
+                }
+                
+            }
+            else
+            {
+                lblBackupText.Text = "No internet connection!";
+                lblBackupText.ForeColor = Color.FromArgb(220, 53, 69);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            downloadDatabase();
-            importDatabase();
+            lblBackupText.Visible = false;
+            lblSyncText.Visible = true;
+            lblSyncText.Text = "Checking your internet connection...";
+            lblSyncText.ForeColor = Color.FromArgb(0, 123, 255);
+            if (Form1.CheckForInternetConnection())
+            {
+                try
+                {
+
+                    lblSyncText.Text = "Downloading database....";
+                    downloadDatabase();
+                    lblSyncText.Text = "Syncing database.....";
+                    importDatabase();
+
+                    lblSyncText.Text = "Database synced sucesfully.";
+                    lblSyncText.ForeColor = Color.FromArgb(40, 167, 69);
+                }
+                catch(Exception ex)
+                {
+                    lblSyncText.Text = "Error downloading/syncing database!";
+                    lblSyncText.ForeColor = Color.FromArgb(220, 53, 69);
+                }
+            }
+            else
+            {
+
+                lblSyncText.Text = "No internet connection!";
+                lblSyncText.ForeColor = Color.FromArgb(220, 53, 69);
+            }
+        }
+
+        private void Backup_Load(object sender, EventArgs e)
+        {
         }
     }
 }

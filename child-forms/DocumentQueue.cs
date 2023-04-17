@@ -54,6 +54,9 @@ namespace cutcot_info_system.forms
                 pnlResults.Controls.Add(spacer);
 
             }
+
+            
+
             reader.Close();
             ConnectMySql.getMySqlConnection().Close();
 

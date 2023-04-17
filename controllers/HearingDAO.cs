@@ -149,6 +149,25 @@ namespace cutcot_info_system.controllers
             }
             mySqlConnection.Close();
         }
+        public void deleteHearings(string hearing_no) {
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+
+            try
+            {
+
+                string sql = "DELETE FROM `hearings` WHERE `id` = '"+hearing_no+"';";
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+
+                mySqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR HERE : " + e.Message);
+            }
+            mySqlConnection.Close();
+        }
 
     }
 }

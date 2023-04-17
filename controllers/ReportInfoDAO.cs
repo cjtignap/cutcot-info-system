@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace cutcot_info_system.models
 {
@@ -324,5 +325,41 @@ namespace cutcot_info_system.models
             mySqlConnection.Close();
         }
 
+        public void deleteReport(string caseNo)
+        {
+            ReportInfo reportInfo = getReport(caseNo);
+            MySqlConnection mySqlConnection = ConnectMySql.getMySqlConnection();
+
+            try
+            {
+                HearingDAO hearingDAO = new HearingDAO();
+                if (reportInfo.firstHearing != null)
+                {
+                    hearingDAO.deleteHearings(reportInfo.firstHearing.Id+"");
+                    if (reportInfo.secondHearing != null)
+                    {
+                        hearingDAO.deleteHearings(reportInfo.secondHearing.Id + "");
+                        if (reportInfo.thirdHearing != null)
+                        {
+                            hearingDAO.deleteHearings(reportInfo.thirdHearing.Id + "");
+                        }
+                    }
+                }
+                string sql = "delete from `reports` where `case_no` = '" + caseNo+"';";
+                mySqlConnection.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, mySqlConnection);
+                cmd.ExecuteNonQuery();
+
+                mySqlConnection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR HERE : " + e.Message);
+            }
+            mySqlConnection.Close();
+
+        }
     }
+
+    
 }
